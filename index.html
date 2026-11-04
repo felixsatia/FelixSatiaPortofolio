@@ -43,10 +43,11 @@ nav ul a{opacity:.8;transition:.3s}nav ul a:hover{opacity:1;color:var(--gold2)}
 
 /* hero */
 .hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;padding:0 0 clamp(56px,8vw,100px);overflow:hidden;background:#04081a}
-.hero .bg{position:absolute;inset:0;background:url("InShot_20251105_190939933.jpg") 62% 33%/cover no-repeat;animation:zoom 22s ease-out forwards}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,var(--ink) 4%,rgba(6,9,18,.62) 55%,rgba(6,9,18,.2))}
+.hero .bg{position:absolute;inset:0 0 auto 0;height:100vw;background:#050a1f url("InShot_20251105_190939933.jpg") 50% 30%/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent);animation:zoom 22s ease-out forwards}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,var(--ink) 2%,transparent 32%)}
+@media(max-width:899px){.hero{padding-top:96vw}}
 @media(min-width:900px){
-  .hero .bg{left:auto;width:60%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%);mask-image:linear-gradient(90deg,transparent,#000 35%);background-position:50% 36%}
+  .hero .bg{inset:0;height:auto;left:auto;right:0;width:max(56vh,380px);max-width:48%;background-size:cover;background-position:50% 22%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 50%);mask-image:linear-gradient(90deg,transparent,#000 50%)}
   .hero::before{background:linear-gradient(0deg,var(--ink) 2%,transparent 38%)}
 }
 .hero .wrap{position:relative;z-index:2}
@@ -69,7 +70,7 @@ nav ul a{opacity:.8;transition:.3s}nav ul a:hover{opacity:1;color:var(--gold2)}
 /* about */
 .about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,6vw,90px);align-items:center}
 .frame{position:relative}
-.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:22% 30%}
 .frame::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);z-index:-1}
 .about .lead+.lead{margin-top:16px}
 .quote{font-weight:500;font-size:1.25rem;line-height:1.5;color:var(--gold2);margin-top:30px;padding-left:22px;border-left:2px solid var(--gold)}
@@ -184,7 +185,7 @@ footer{padding:32px 0;text-align:center;color:var(--mute);font-size:.82rem;borde
 </div></div>
 
 <section class="about" id="tentang"><div class="wrap">
-  <div class="frame rv"><img src="20250921_204502.jpg" alt="Felix Satia di samping piano" loading="lazy"></div>
+  <div class="frame rv"><img src="1728278677799.jpeg" alt="Felix Satia di depan grand piano" loading="lazy"></div>
   <div class="rv">
     <span class="eye">Tentang</span>
     <h2>Musik yang diajarkan dengan hati dan disiplin</h2>
@@ -336,7 +337,6 @@ const GAL = [
   ["1728302182364.jpeg","Bali In’t Music Camp, bersama peserta"],
   ["img_3_1793793068398%20(1).jpg","Konser Journey Through The Era"],
   ["img_4_1793793107295%20(1).jpg","Kelas JISMF 2014"],
-  ["1728278677799.jpeg","Resital 2018"],
   ["img_8_1791283419704.jpg","Tampil di Bali, 2011"],
   ["img_5_1793793124632%20(1).jpg","Bimbingan paduan suara, JISMF 2014"],
   ["1728368821890.jpeg","STIKMI Concert, 12 April 2014"],
