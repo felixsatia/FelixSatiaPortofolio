@@ -194,7 +194,7 @@ footer{padding:34px 0;text-align:center;color:var(--mute);font-size:.78rem;lette
   .perks{font-size:.7rem}
 }
 
-/* potret: hitam putih, seperti tuts piano */
+/* potret: hitam putih, contact sheet sinematik (mobile = desktop) */
 .noir{background:#09090a;color:#f4f2ee;border-top:1px solid #2a2a2c;padding-top:clamp(96px,11vw,150px)}
 .noir::before{content:"";position:absolute;top:0;left:50%;width:1px;height:72px;background:linear-gradient(#f4f2ee,transparent)}
 .pq{margin:clamp(60px,8vw,110px) auto 0;max-width:30ch;text-align:center;padding-top:34px;border-top:1px solid #2a2a2c}
@@ -205,12 +205,22 @@ footer{padding:34px 0;text-align:center;color:var(--mute);font-size:.78rem;lette
 .noir .lead{color:#8d8d92}
 .noir .q{margin:34px 0 0;max-width:34ch;font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.55;font-weight:500;color:#f4f2ee;padding-left:22px;border-left:2px solid #f4f2ee}
 .noir .top{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,80px);align-items:end}
-.pg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(12px,2vw,26px);align-items:center;margin-top:60px}
-.pg figure{line-height:0;overflow:hidden;cursor:zoom-in;background:#000;border:1px solid #2a2a2c;box-shadow:0 30px 70px rgba(0,0,0,.7)}
-.pg img{width:100%;height:auto;filter:grayscale(1) contrast(1.06);transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .6s}
-.pg figure:hover img{transform:scale(1.04);filter:grayscale(1) contrast(1.12) brightness(1.08)}
 @media(max-width:860px){.noir .top{grid-template-columns:1fr}}
-@media(max-width:700px){.pg{grid-template-columns:1fr 1fr;margin-top:40px}.pg figure:first-child{grid-column:1/3}}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,2.4vw,30px);align-items:start;margin-top:64px;padding:clamp(12px,2.2vw,26px) 0;border-block:1px solid #2a2a2c}
+.pg figure{margin:0;line-height:0;cursor:zoom-in;background:none;border:0;box-shadow:none;overflow:visible}
+.pg figure:nth-child(2){margin-top:clamp(26px,7vw,90px)}
+.pg .fr{position:relative;overflow:hidden;background:#000;border:1px solid #2a2a2c;box-shadow:0 30px 70px rgba(0,0,0,.75)}
+.pg .fr::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 60px rgba(0,0,0,.55);transition:.6s}
+.pg figure:hover .fr::after{box-shadow:inset 0 0 30px rgba(0,0,0,.25)}
+.pg img{width:100%;height:auto;filter:grayscale(1) contrast(1.08);transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .6s}
+.pg figure:hover img{transform:scale(1.05);filter:grayscale(1) contrast(1.14) brightness(1.08)}
+.pg figcaption{display:flex;justify-content:space-between;align-items:baseline;line-height:1.3;padding-top:clamp(8px,1.6vw,16px);font:500 clamp(.5rem,1.5vw,.7rem) 'Plus Jakarta Sans',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#8d8d92}
+.pg figcaption i{font-style:normal;font-weight:700;color:#f4f2ee}
+@media(max-width:700px){
+  .pg{margin-top:44px;padding:14px 0}
+  .pg figcaption{letter-spacing:.14em}
+  .pg figcaption span{display:none}
+}
 </style>
 </head>
 <body>
@@ -378,7 +388,7 @@ const STU = [
   ["Julian Ayden L.","Distinction","ABRSM Piano Grade 1","Ujian digital, Januari 2026","images%20(1)%20(67).jpeg","205%","49% 49%"],
   ["Julian Ayden L.","Gold Award","Free Selection B10","INPF Jabodetabek 2025, ICE BSD",INPF+"(3).jpg","208%","51% 44%"],
   ["Jaden Alaric L.","Platinum Award","Kinder A1","INPF Jabodetabek 2025, ICE BSD",INPF+"(2).jpg","208%","51% 48%"],
-  ["Claire D.","1st Commendation","Kompetisi piano","Rhapsodie.co","https://raw.githubusercontent.com/sonatamusicstudio/FelixSatiaPortofolio/main/IMG-20251115-WA0007.jpg","",""],
+  ["Claire D.","1st Commendation","Kompetisi piano","Rhapsodie.co","IMG-20251115-WA0007.jpg","",""],
   ["Claire Deitra H.","Penghargaan","Rhapsodie","NICE PIK 2","20261104_191902_hd.jpg","",""]
 ];
 const sg = document.getElementById("sg");
@@ -408,8 +418,8 @@ const GAL = [
   ["img_9_1791283432702.jpg","Bali In’t Music Camp, 2011"],
   ["img_9_1793793228435%20(1).jpg","Paduan suara JISMF 2014"],
   ["1728302182364.jpeg","Bali In’t Music Camp, bersama peserta"],
-  ["https://raw.githubusercontent.com/sonatamusicstudio/FelixSatiaPortofolio/main/1728278362077.jpeg","Home Concert Yayasan Musik Jakarta, 2012"],
-  ["https://raw.githubusercontent.com/sonatamusicstudio/FelixSatiaPortofolio/main/1728278413639.jpeg","Home Concert Yayasan Musik Jakarta, 2012"],
+  ["1728278362077.jpeg","Home Concert Yayasan Musik Jakarta, 2012"],
+  ["1728278413639.jpeg","Home Concert Yayasan Musik Jakarta, 2012"],
   ["img_3_1793793068398%20(1).jpg","Konser Journey Through The Era"],
   ["img_4_1793793107295%20(1).jpg","Kelas JISMF 2014"],
   ["img_8_1791283419704.jpg","Tampil di Bali, 2011"],
@@ -433,21 +443,20 @@ GAL.forEach((g, n) => {
   gal.appendChild(f);
 });
 
-
-/* ---------- potret ---------- */
-const PORT = ["https://raw.githubusercontent.com/sonatamusicstudio/FelixSatiaPortofolio/main/ image%20(11)%20(1).jpg","https://raw.githubusercontent.com/sonatamusicstudio/FelixSatiaPortofolio/main/ image%20(8)%20(2).jpg","https://raw.githubusercontent.com/sonatamusicstudio/FelixSatiaPortofolio/main/ 904b3b33-83c0-4e02-bdfd-15fa7408c320%20(1).png"];
+/* ---------- potret: contact sheet sinematik ---------- */
+const PORT = ["image%20(11)%20(1).jpg","image%20(8)%20(2).jpg","904b3b33-83c0-4e02-bdfd-15fa7408c320%20(1).png"];
+const ROM = ["I","II","III"];
 const pg = document.getElementById("pg");
-PORT.forEach(u => {
-  u = u.replace(" ", "");
+PORT.forEach((u, n) => {
   const f = document.createElement("figure");
-  f.innerHTML = `<img src="${u}" alt="Potret Felix Satia" loading="lazy" decoding="async">`;
+  f.innerHTML = `<div class="fr"><img src="${u}" alt="Potret Felix Satia" loading="lazy" decoding="async"></div><figcaption><i>${ROM[n]}</i><span>Felix Satia</span></figcaption>`;
   f.onclick = () => open(idx(u));
   pg.appendChild(f);
 });
 
 /* ---------- lightbox ---------- */
 const PIC = [...ACH.map(a => [a[4], a[1].replace(/<[^>]+>/g,"")]),
-  ...STU.map(s => [s[4], s[0] + " · " + s[1] + " · " + s[2]]), ...GAL, ...PORT.map(u => [u.replace(" ",""), "Potret Felix Satia"])];
+  ...STU.map(s => [s[4], s[0] + " · " + s[1] + " · " + s[2]]), ...GAL, ...PORT.map(u => [u, "Potret Felix Satia"])];
 let cur = 0;
 function idx(f){ return PIC.findIndex(p => p[0] === f); }
 function open(i){ if(i<0) return; cur = i; show(); lb.classList.add("on"); document.body.style.overflow = "hidden"; }
