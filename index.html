@@ -214,12 +214,8 @@ footer{padding:34px 0;text-align:center;color:var(--mute);font-size:.78rem;lette
 .pg figure:hover .fr::after{box-shadow:inset 0 0 30px rgba(0,0,0,.25)}
 .pg img{width:100%;height:auto;filter:grayscale(1) contrast(1.08);transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .6s}
 .pg figure:hover img{transform:scale(1.05);filter:grayscale(1) contrast(1.14) brightness(1.08)}
-.pg figcaption{display:flex;justify-content:space-between;align-items:baseline;line-height:1.3;padding-top:clamp(8px,1.6vw,16px);font:500 clamp(.5rem,1.5vw,.7rem) 'Plus Jakarta Sans',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#8d8d92}
-.pg figcaption i{font-style:normal;font-weight:700;color:#f4f2ee}
 @media(max-width:700px){
   .pg{margin-top:44px;padding:14px 0}
-  .pg figcaption{letter-spacing:.14em}
-  .pg figcaption span{display:none}
 }
 </style>
 </head>
@@ -445,11 +441,10 @@ GAL.forEach((g, n) => {
 
 /* ---------- potret: contact sheet sinematik ---------- */
 const PORT = ["image%20(11)%20(1).jpg","image%20(8)%20(2).jpg","904b3b33-83c0-4e02-bdfd-15fa7408c320%20(1).png"];
-const ROM = ["I","II","III"];
 const pg = document.getElementById("pg");
-PORT.forEach((u, n) => {
+PORT.forEach(u => {
   const f = document.createElement("figure");
-  f.innerHTML = `<div class="fr"><img src="${u}" alt="Potret Felix Satia" loading="lazy" decoding="async"></div><figcaption><i>${ROM[n]}</i><span>Felix Satia</span></figcaption>`;
+  f.innerHTML = `<div class="fr"><img src="${u}" alt="Potret Felix Satia" loading="lazy" decoding="async"></div>`;
   f.onclick = () => open(idx(u));
   pg.appendChild(f);
 });
