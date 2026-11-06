@@ -106,25 +106,29 @@ nav ul a{opacity:.8;transition:.3s}nav ul a:hover{opacity:1;color:var(--gold2)}
 .row small{color:var(--gold2);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--line);padding:6px 16px}
 @media(max-width:700px){.row{grid-template-columns:64px 1fr;gap:16px}.row small{grid-column:2;justify-self:start}}
 
-/* murid: 5 kartu seragam (disalin dari versi Sonata) */
+/* murid: gaya Sonata. Header di tengah, 3 kartu atas + 2 kartu bawah di tengah, foto utuh (tanpa zoom/crop) */
 .students{background:linear-gradient(180deg,var(--ink),var(--navy) 50%,var(--ink))}
-.sg{--night:#050816;--navy-d:#0C1840;--ivory:#F6F3EC;--silver:#AAA59E;--champ:#E4CE97;--camel:#BFA16C;--gold-grad:linear-gradient(135deg,#F1E2B5 0%,#E4CE97 22%,#BFA16C 55%,#927A51 80%,#C8AD7C 100%);--ease:cubic-bezier(.19,1,.22,1);--disp:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif;--ui:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(14px,1.6vw,26px);max-width:1360px;margin:54px auto 0}
-.sc{position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#0E1C4A,var(--night));overflow:hidden;cursor:pointer;box-shadow:0 34px 64px -30px rgba(0,0,0,.85),0 0 0 1px rgba(191,161,108,.38);transition:transform .7s var(--ease),box-shadow .7s var(--ease),opacity 1.1s var(--ease)}
+.students .head{text-align:center}
+.students .eye{flex-direction:column;justify-content:center;gap:14px;font-size:.66rem;letter-spacing:.34em;margin-bottom:26px}
+.students .eye::before{display:none}
+.students .eye::after{content:"";width:44px;height:1px;background:var(--gold)}
+.students h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.students .lead{margin:0 auto;font-family:'Libre Baskerville',Georgia,'Times New Roman',serif;font-style:italic;font-size:.92rem;line-height:1.8}
+.sg{--night:#050816;--navy-d:#0C1840;--ivory:#F6F3EC;--silver:#AAA59E;--champ:#E4CE97;--camel:#BFA16C;--gold-grad:linear-gradient(135deg,#F1E2B5 0%,#E4CE97 22%,#BFA16C 55%,#927A51 80%,#C8AD7C 100%);--ease:cubic-bezier(.19,1,.22,1);--disp:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif;--ui:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif;display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.8vw,24px);max-width:1040px;margin:54px auto 0}
+.sc{grid-column:span 2;position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#0E1C4A,var(--night));overflow:hidden;cursor:pointer;box-shadow:0 34px 64px -30px rgba(0,0,0,.85),0 0 0 1px rgba(191,161,108,.38);transition:transform .7s var(--ease),box-shadow .7s var(--ease),opacity 1.1s var(--ease)}
+.sc:nth-child(4){grid-column:2/span 2}
+.sc:nth-child(5){grid-column:4/span 2}
 .sc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold-grad);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
 .sc:hover,.sc:focus-visible{transform:translateY(-10px);box-shadow:0 50px 90px -30px rgba(5,8,22,.9),0 0 0 1px var(--camel)}
 .sc:hover::after,.sc:focus-visible::after{transform:scaleX(1)}
-.sc .pw{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--navy-d);margin:10px 10px 0;box-shadow:0 0 0 1px rgba(228,206,151,.3)}
-.sc .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--fx,50%) var(--fy,30%);transform:scale(var(--z,1.6));transform-origin:var(--fx,50%) var(--fy,30%);filter:saturate(.94) contrast(1.04) brightness(.96);transition:transform 1.4s var(--ease)}
-.sc:hover .ph{transform:scale(calc(var(--z,1.6) + .05))}
-.sc .pw::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 100% 100% at 50% 50%,transparent 65%,rgba(5,8,22,.3) 100%);box-shadow:inset 0 0 0 1px rgba(228,206,151,.2)}
-.sc .tx{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:1.3rem 1.2rem 1.6rem}
-.sc b{align-self:flex-start;font:600 .56rem var(--ui);letter-spacing:.22em;text-transform:uppercase;color:var(--night);background:var(--gold-grad);padding:.4rem .85rem;margin-bottom:1rem}
-.sc h3{font-family:var(--disp);font-weight:600;font-size:1.05rem;line-height:1.3;color:var(--ivory);margin-bottom:.5rem}
-.sc p{font-family:'Libre Baskerville',Georgia,'Times New Roman',serif;font-size:.76rem;line-height:1.7;color:var(--silver);margin-top:auto}
-@media(max-width:1100px){
-.sg{grid-template-columns:repeat(6,1fr);max-width:900px}
-.sc{grid-column:span 2}
-.sc:nth-child(4){grid-column:2/span 2}.sc:nth-child(5){grid-column:4/span 2}}
+.sc .pw{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--navy-d);margin:10px 10px 0;box-shadow:0 0 0 1px rgba(228,206,151,.3)}
+.sc.poster .pw{aspect-ratio:1/1}
+.sc .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--fx,50%) var(--fy,50%);transform:scale(var(--z,1));transform-origin:var(--fx,50%) var(--fy,50%);transition:transform 1.4s var(--ease)}
+.sc:hover .ph{transform:scale(calc(var(--z,1) + .05))}
+.sc .tx{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:1.1rem 1rem 1.4rem}
+.sc b{align-self:flex-start;font:600 .54rem var(--ui);letter-spacing:.22em;text-transform:uppercase;color:var(--night);background:var(--gold-grad);padding:.4rem .8rem;margin-bottom:.9rem}
+.sc h3{font-family:var(--disp);font-weight:600;font-size:1rem;line-height:1.3;color:var(--ivory);margin-bottom:.5rem}
+.sc p{font-family:'Libre Baskerville',Georgia,'Times New Roman',serif;font-size:.72rem;line-height:1.7;color:var(--silver);margin-top:auto}
 
 /* performance */
 .perf .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
@@ -190,11 +194,10 @@ footer{padding:34px 0;text-align:center;color:var(--mute);font-size:.78rem;lette
   .gal figcaption{padding:10px 2px 12px;font-size:.74rem;gap:8px;line-height:1.35;flex-direction:column}
   .gal figcaption i{font-size:.6rem}
   .rv{transform:translateY(14px);transition-duration:.7s}
-  .sg{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:36px}
-  .sc,.sc:nth-child(4),.sc:nth-child(5){grid-column:auto}
-  .sc:nth-child(5){grid-column:1/-1;width:calc(50% - 6px);justify-self:center}
-  .sc .pw{margin:6px 6px 0}
-  .sc .tx{padding:1rem .8rem 1.2rem}.sc h3{font-size:.95rem}.sc p{font-size:.68rem}
+  .sg{gap:8px;margin-top:36px}
+  .sc .pw{margin:5px 5px 0}
+  .sc .tx{padding:.8rem .6rem 1rem}.sc h3{font-size:.8rem}.sc p{font-size:.58rem;line-height:1.6}
+  .sc b{font-size:.44rem;padding:.32rem .55rem;margin-bottom:.7rem;letter-spacing:.16em}
   .stat{padding:28px 10px}
   .card{padding:32px 24px}
   .fab{right:12px;bottom:12px;padding:11px 16px;font-size:.68rem}
@@ -290,9 +293,11 @@ footer{padding:34px 0;text-align:center;color:var(--mute);font-size:.78rem;lette
 </div></section>
 
 <section class="students" id="murid"><div class="wrap">
-  <span class="eye">Prestasi murid</span>
-  <h2 class="rv">Murid yang tumbuh bersama kami</h2>
-  <p class="lead rv">Bukti nyata dari latihan yang terarah: dari ujian internasional hingga festival piano nasional.</p>
+  <div class="head">
+    <span class="eye">Our Students</span>
+    <h2 class="rv">Murid yang Tumbuh Bersama Kami</h2>
+    <p class="lead rv">Bukti dari latihan yang terarah: dari ujian internasional hingga festival piano nasional.</p>
+  </div>
   <div class="sg" id="sg"></div>
 </div></section>
 
@@ -389,10 +394,8 @@ ACH.forEach(a => {
   tl.appendChild(d);
 });
 
-/* ---------- prestasi murid (disalin dari versi Sonata) ---------- */
-/* SP = 5 foto murid yang sudah dipotong rapi (wajah + bahu, rasio 4:5, tanpa banner/teks).
-   GANTI isi array SP di bawah dengan 5 string base64 "data:image/jpeg;base64,..." dari HTML sebelumnya.
-   Sementara ini diisi file asli sebagai cadangan agar halaman tetap tampil. */
+/* ---------- prestasi murid (gaya Sonata: poster tampil utuh, tanpa zoom) ---------- */
+/* SP = 5 file foto/poster murid sesuai urutan kartu. Ganti nama file di sini jika perlu. */
 const INPF = "Congratulations%20to%20all%20participants!INPF%20Jabodetabek%202025ICE%20BSD4th%20May%202025%23minuetschoolofmusic%20%23minuetschool%20%23inpf%20%23inpf2025%20%23faseevent%20%23faseevent2025%20%23indonesianationalpianofestival%20%23icebsd%20%23icebsdtangerang.heic%20";
 const SP = [
   "images%20(1)%20(67).jpeg",
@@ -401,7 +404,8 @@ const SP = [
   "IMG-20251115-WA0007.jpg",
   "https://raw.githubusercontent.com/felixsatia/FelixSatiaPortofolio/main/20261106_111113.jpg"
 ];
-/* Format: [nama, badge, judul, keterangan, [foto], zoom, fokus-x, fokus-y] */
+/* Format: [nama, badge, judul, keterangan, [foto], zoom, fokus-x, fokus-y]
+   3 kartu pertama = poster persegi (tampil utuh), 2 kartu terakhir = foto potret 4:5 */
 const STU = [
   ['Julian Ayden L.','Distinction','ABRSM Piano Grade 1','Ujian digital, Januari 2026',[SP[0]],1,'50%','50%'],
   ['Julian Ayden L.','Gold Award','Free Selection B10','INPF Jabodetabek 2025, ICE BSD',[SP[1]],1,'50%','50%'],
@@ -410,9 +414,9 @@ const STU = [
   ['Claire Deitra H.','3rd Commendation','Rhapsodie','NICE PIK 2',[SP[4]],1,'50%','50%']
 ];
 const sg = document.getElementById("sg");
-STU.forEach(s => {
+STU.forEach((s, i) => {
   const u = s[4][0]; if (!u) return;
-  const c = document.createElement("div"); c.className = "sc rv"; c.hidden = true; c.tabIndex = 0; sg.appendChild(c);
+  const c = document.createElement("div"); c.className = "sc rv" + (i < 3 ? " poster" : ""); c.hidden = true; c.tabIndex = 0; sg.appendChild(c);
   const im = new Image();
   im.onload = () => {
     c.innerHTML = '<div class="pw"><img class="ph" src="' + u + '" alt="' + s[0] + '" style="--z:' + s[5] + ';--fx:' + s[6] + ';--fy:' + s[7] + '" decoding="async"></div><div class="tx"><b>' + s[1] + '</b><h3>' + s[0] + '</h3><p>' + s[2] + '<br>' + s[3] + '</p></div>';
