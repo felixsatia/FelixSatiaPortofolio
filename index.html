@@ -385,14 +385,14 @@ const STU = [
   ["Julian Ayden L.","Gold Award","Free Selection B10","INPF Jabodetabek 2025, ICE BSD",INPF+"(3).jpg","208%","51% 44%"],
   ["Jaden Alaric L.","Platinum Award","Kinder A1","INPF Jabodetabek 2025, ICE BSD",INPF+"(2).jpg","208%","51% 48%"],
   ["Claire D.","1st Commendation","Kompetisi piano","Rhapsodie.co","IMG-20251115-WA0007.jpg","",""],
-  ["Claire Deitra H.","3rd Commendation","Rhapsodie","NICE PIK 2","20261104_191902_hd.jpg","",""]
+  ["Claire Deitra H.","3rd Commendation","Rhapsodie","NICE PIK 2","https://raw.githubusercontent.com/felixsatia/FelixSatiaPortofolio/main/20261106_111113.jpg","",""]
 ];
 const sg = document.getElementById("sg");
 STU.forEach(s => {
   const c = document.createElement("div"); c.className = "sc rv"; c.tabIndex = 0;
   const ph = s[5]
     ? `<div class="pw"><div class="ph" style="background-image:url('${s[4]}');background-size:${s[5]};background-position:${s[6]}"></div></div>`
-    : `<div class="pw"><img class="ph" src="${s[4]}" alt="${s[0]}" loading="lazy" onerror="this.onerror=null;this.src='20261104_191902.jpg'"></div>`;
+    : `<div class="pw"><img class="ph" src="${s[4]}" alt="${s[0]}" loading="lazy"></div>`;
   c.innerHTML = `${ph}<div class="tx"><b>${s[1]}</b><h3>${s[0]}</h3><p>${s[2]}<br>${s[3]}</p></div>`;
   c.onclick = () => open(idx(s[4]));
   c.onkeydown = e => { if (e.key === "Enter") c.onclick(); };
@@ -462,7 +462,6 @@ lb.querySelector(".x").onclick = close;
 lb.querySelector(".p").onclick = () => step(-1);
 lb.querySelector(".n").onclick = () => step(1);
 lb.onclick = e => { if (e.target === lb) close(); };
-lbi.onerror = () => { if (lbi.src.includes("_hd.jpg")) lbi.src = "20261104_191902.jpg"; };
 document.addEventListener("keydown", e => {
   if (!lb.classList.contains("on")) return;
   if (e.key === "Escape") close(); if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1);
