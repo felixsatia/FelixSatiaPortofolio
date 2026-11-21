@@ -371,6 +371,23 @@ footer{background:#242424;color:#bdb7a8;border-top:3px solid #d9241f}
 @keyframes tick{to{transform:translateX(-50%)}}
 @media(max-width:700px){.tick{padding:13px 0}.tg span{font-size:.62rem;letter-spacing:.2em}.tg span::after{margin:0 22px}.tick::before,.tick::after{width:40px}}
          </style>
+<style>
+/* hero: foto menyatu dengan latar */
+.hero{min-height:max(100svh,700px);display:flex;align-items:center;padding:120px 0 90px;background:radial-gradient(90% 85% at 72% 30%,#ead0a8 0,#e0c49b 50%,#dcbd94 100%)}
+.hg{display:block;position:relative;z-index:2}
+.ht{max-width:560px}
+.hp{position:absolute;right:0;top:0;bottom:0;width:min(60%,900px);max-width:none;margin:0;justify-self:auto;z-index:1;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 36%);mask-image:linear-gradient(90deg,transparent 0,#000 36%)}
+.hp::before,.hp::after{display:none}
+.hp img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 12%;box-shadow:none}
+.frame img{object-position:50% 22%}
+@media(max-width:899px){
+  .hero{display:block;padding:0 0 56px;min-height:0}
+  .hg{display:flex;flex-direction:column;gap:0}
+  .hp{order:-1;position:relative;width:100vw;margin-left:calc(50% - 50vw);height:auto;aspect-ratio:3/3.7;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+  .hp img{object-position:50% 8%}
+  .ht{max-width:none;margin-top:-34px}
+}
+</style>  
 </head>
 </head>
 <body>
@@ -390,7 +407,7 @@ footer{background:#242424;color:#bdb7a8;border-top:3px solid #d9241f}
       <p>Belajar musik dengan pengajar peraih Best Teacher Award dan Gold Award. Kelas pertama gratis, tanpa komitmen.</p>
       <div class="cta"><a class="btn" data-wa href="#kontak">Daftar free trial</a><a class="btn ghost" href="#murid">Lihat prestasi murid</a></div>
     </div>
-    <figure class="hp"><img src="foto1_edit_v3.jpg" width="912" height="1136" alt="Potret Felix Satia di samping piano" fetchpriority="high"></figure>
+    <figure class="hp"><img src="hero-felix.jpg" width="1530" height="2048" alt="Potret Felix Satia" fetchpriority="high"></figure>
   </div>
 </header>
   <div class="tick" aria-label="Sorotan prestasi">
@@ -426,7 +443,7 @@ footer{background:#242424;color:#bdb7a8;border-top:3px solid #d9241f}
 </div></div>
 
 <section class="about" id="tentang"><div class="wrap">
-  <div class="frame rv"><img src="1728278677799.jpeg" alt="Felix Satia di depan grand piano" loading="lazy"></div>
+  <div class="frame rv"><img src="profil-felix.jpg" " alt="Felix Satia di depan grand piano" loading="lazy"></div>
   <div class="rv">
     <span class="eye">Tentang</span>
     <h2>Musik yang diajarkan dengan hati dan disiplin</h2>
