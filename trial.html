@@ -370,69 +370,150 @@ footer{background:#242424;color:#bdb7a8;border-top:3px solid #d9241f}
 .tg b{color:#ff5a4f;font-weight:700}
 @keyframes tick{to{transform:translateX(-50%)}}
 @media(max-width:700px){.tick{padding:13px 0}.tg span{font-size:.62rem;letter-spacing:.2em}.tg span::after{margin:0 22px}.tick::before,.tick::after{width:40px}}
-         </style>
-<style>
-/* hero: foto menyatu dengan latar */
-.hero{min-height:max(100svh,700px);display:flex;align-items:center;padding:120px 0 90px;background:radial-gradient(90% 85% at 72% 30%,#ead0a8 0,#e0c49b 50%,#dcbd94 100%)}
-.hg{display:block;position:relative;z-index:2}
-.ht{max-width:560px}
-.hp{position:absolute;right:0;top:0;bottom:0;width:min(60%,900px);max-width:none;margin:0;justify-self:auto;z-index:1;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 36%);mask-image:linear-gradient(90deg,transparent 0,#000 36%)}
-.hp::before,.hp::after{display:none}
-.hp img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 12%;box-shadow:none}
-.frame img{object-position:50% 22%}
-@media(max-width:899px){
-  .hero{display:block;padding:0 0 56px;min-height:0}
-  .hg{display:flex;flex-direction:column;gap:0}
-  .hp{order:-1;position:relative;width:100vw;margin-left:calc(50% - 50vw);height:auto;aspect-ratio:3/3.7;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
-  .hp img{object-position:50% 8%}
-  .ht{max-width:none;margin-top:-34px}
+    </style>
+         <style>
+  /* ===== Tema baru: krem · navy royal (premium) ===== */
+:root{
+  --ink:#f6f0de;          /* latar utama krem */
+  --navy:#101a33;         /* navy-ink (section Performance) */
+  --navy2:#16224a;
+  --gold:#1d3a72;         /* aksen utama = navy royal */
+  --gold2:#14274f;        /* navy tua */
+  --ivory:#1a2038;        /* teks utama */
+  --mute:#6a6455;
+  --line:rgba(29,58,114,.30);
 }
-</style>  
-</head>
-</head>
-  <style>
-.hero{position:relative;min-height:max(100svh,700px);display:flex;align-items:center;padding:120px 0 90px;background:radial-gradient(90% 85% at 72% 30%,#ead0a8 0,#e0c49b 50%,#dcbd94 100%);overflow:hidden}
-.hg{display:block;position:static}
-.ht{position:relative;z-index:2;max-width:560px}
-.hp{position:absolute;right:0;top:0;bottom:0;width:min(60%,900px);max-width:none;margin:0;z-index:1;line-height:0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 36%);mask-image:linear-gradient(90deg,transparent 0,#000 36%)}
-.hp::before,.hp::after{display:none}
-.hp img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 12%;box-shadow:none}
-@media(max-width:899px){
-  .hero{display:block;padding:0 0 56px;min-height:0}
-  .hg{display:flex;flex-direction:column;gap:0}
-  .hp{order:-1;position:relative;right:auto;top:auto;bottom:auto;width:100vw;margin-left:calc(50% - 50vw);height:auto;aspect-ratio:3/3.7;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
-  .hp img{object-position:50% 8%}
-  .ht{max-width:none;margin-top:-34px}
+body{background:#f6f0de;color:#1a2038}
+body::after{opacity:.02}
+#bar{background:linear-gradient(90deg,#1d3a72,#8fb0ea)}
+.lead{color:#5c5648}
+
+/* nav */
+nav.s{background:rgba(246,240,222,.92);border-bottom:1px solid rgba(29,58,114,.3)}
+.logo{color:#1a2038}.logo i{color:#1d3a72}
+nav ul a{color:#1a2038}
+nav ul a:hover{color:#1d3a72}
+
+/* tombol */
+.btn{background:linear-gradient(120deg,#2c4f96,#1d3a72 55%,#14274f);color:#fff;border-color:#1d3a72}
+.btn:hover{box-shadow:0 10px 40px rgba(29,58,114,.38)}
+.btn.ghost{background:none;color:#1a2038;border-color:rgba(26,32,56,.4)}
+.btn.ghost:hover{border-color:#1d3a72;color:#1d3a72;box-shadow:none}
+
+/* hero */
+.hero{background:radial-gradient(ellipse at 80% 20%,#fff8e2 0,transparent 55%),radial-gradient(ellipse at 0 100%,#efe3c0 0,transparent 55%),#f6f0de}
+.hero h1{background:linear-gradient(120deg,#101a33 10%,#1d3a72 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#4a4538}
+.hero .role{color:#1d3a72}
+.hp img{box-shadow:0 30px 70px rgba(10,18,38,.32)}
+.hp::after{border-color:#1d3a72}
+.hp::before{background:radial-gradient(circle,rgba(29,58,114,.12),transparent 65%)}
+
+/* stats = bar navy */
+.stats{background:#1d3a72;border-block:0}
+.stat{border-right-color:rgba(255,255,255,.25)}
+.stat b{color:#fff}
+.stat span{color:rgba(246,240,222,.85)}
+@media(max-width:700px){.stat:nth-child(-n+2){border-bottom-color:rgba(255,255,255,.25)}}
+
+/* about */
+.quote{color:#14274f;border-left-color:#1d3a72}
+.frame::after{border-color:#1d3a72}
+
+/* kelas */
+.programs{background:#fffdf6;color:#1a2038}
+.programs .lead{color:#5c5648}
+.programs .eye{color:#14274f}.programs .eye::before{background:#14274f}
+.grid4{background:#e6dcc0;border-color:#e6dcc0}
+.card{background:#fffaf0}
+.card:hover{background:#fff;box-shadow:0 20px 50px rgba(29,58,114,.14)}
+.card::before{background:#1d3a72}
+.card svg{stroke:#1d3a72}
+.card h3{color:#1a2038}
+.card p{color:#5c5648}
+
+/* prestasi pengajar */
+.tl{border-top-color:rgba(26,32,56,.18)}
+.row{border-bottom-color:rgba(26,32,56,.18)}
+.row:hover{background:linear-gradient(90deg,rgba(29,58,114,.09),transparent)}
+.row .y{color:#1d3a72}
+.row p{color:#6a6455}
+.row small{color:#14274f;border-color:rgba(29,58,114,.45)}
+
+/* murid = section navy-ink */
+.students{background:linear-gradient(180deg,#101a33,#0a1226);color:#f6f0de}
+.students .eye{color:#8fb0ea}
+.students .eye::after{background:#8fb0ea}
+.students .lead{color:#b9c0d4}
+.sg{
+  --night:#0a1226;--navy-d:#16224a;--ivory:#ffffff;--silver:#b9c0d4;
+  --champ:#f6f0de;--camel:#8fb0ea;
+  --gold-grad:linear-gradient(135deg,#a9c3f2 0%,#5f87d6 30%,#2c4f96 60%,#14274f 100%);
 }
+.sc{background:linear-gradient(180deg,#16224a,#0a1226);box-shadow:0 34px 64px -30px rgba(0,0,0,.85),0 0 0 1px rgba(143,176,234,.4)}
+.sc:hover,.sc:focus-visible{box-shadow:0 50px 90px -30px rgba(0,0,0,.9),0 0 0 1px #8fb0ea}
+.sc .pw{box-shadow:0 0 0 1px rgba(246,240,222,.25)}
+.sc .pw::after{box-shadow:inset 0 0 0 1px rgba(246,240,222,.15)}
+.sc b{color:#fff}
+
+/* performance = navy-ink */
+.perf{color:#f6f0de}
+.perf .eye{color:#8fb0ea}.perf .eye::before{background:#8fb0ea}
+.perf .lead{color:#b9c0d4}
+.perf .btn.ghost{color:#f6f0de;border-color:rgba(246,240,222,.45)}
+.perf .btn.ghost:hover{border-color:#8fb0ea;color:#8fb0ea}
+.vid{border-color:rgba(143,176,234,.5)}
+.vid .play{border-color:#fff}
+.vid .play svg{fill:#fff}
+.vid:hover .play{background:#1d3a72}
+
+/* galeri */
+.gal figure{background:linear-gradient(150deg,#ffffff,#efe7cf);border-color:rgba(26,32,56,.12);box-shadow:0 20px 44px rgba(40,50,80,.18)}
+.gal figure:hover{border-color:#1d3a72;box-shadow:0 30px 70px rgba(40,50,80,.28),0 0 0 1px rgba(29,58,114,.25)}
+.gal .im::after{box-shadow:inset 0 0 50px rgba(0,0,0,.10)}
+.gal figcaption{color:#1a2038}
+.gal figcaption i{color:#1d3a72}
+
+/* potret hitam-putih: tetap gelap, aksen biru */
+.noir{background:#0a1226}
+.noir::before{background:linear-gradient(#8fb0ea,transparent)}
+.noir .eye{color:#8fb0ea}.noir .eye::before{background:#8fb0ea}
+.noir .q{border-left-color:#8fb0ea}
+.pq{border-top-color:#8fb0ea}
+
+/* CTA akhir */
+.final{background:radial-gradient(ellipse at 50% 0,#ffffff,#f6f0de 70%);border-top:1px solid rgba(29,58,114,.3)}
+.final .eye::after{background:#1d3a72}
+.perks{color:#14274f}
+.soc a{border-color:rgba(29,58,114,.4)}
+.soc svg{fill:#1d3a72}
+.soc a:hover{background:#1d3a72}
+.soc a:hover svg{fill:#fff}
+
+/* footer & lightbox */
+footer{background:#101a33;color:#b9c0d4;border-top:3px solid #1d3a72}
+.lb button{color:#f6f0de}
+.lb button:hover{color:#8fb0ea}
+.lb p{color:#f6f0de}
+.fab{box-shadow:0 10px 40px rgba(29,58,114,.4)}
+
+/* ticker di bawah header */
+.tick{background:#101a33;border-block:1px solid rgba(143,176,234,.45);overflow:hidden;position:relative;padding:16px 0}
+.tick::before,.tick::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.tick::before{left:0;background:linear-gradient(90deg,#101a33,transparent)}
+.tick::after{right:0;background:linear-gradient(270deg,#101a33,transparent)}
+.tk{display:flex;width:max-content;animation:tick 50s linear infinite}
+.tick:hover .tk{animation-play-state:paused}
+.tg{display:flex;align-items:center;flex-shrink:0}
+.tg span{display:flex;align-items:center;white-space:nowrap;font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#f6f0de}
+.tg span::after{content:"";width:6px;height:6px;margin:0 34px;background:#8fb0ea;transform:rotate(45deg)}
+.tg b{color:#8fb0ea;font-weight:700}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media(max-width:700px){.tick{padding:13px 0}.tg span{font-size:.62rem;letter-spacing:.2em}.tg span::after{margin:0 22px}.tick::before,.tick::after{width:40px}}
   </style>
-  <style>
-/* HERO DESKTOP: foto utuh, tidak terpotong */
-@media(min-width:900px){
-  .hero{min-height:max(100svh,720px);padding:110px 0 70px;overflow:hidden}
-  .hp{
-    position:absolute;top:0;bottom:0;right:0;
-    height:100%;width:auto;max-width:60%;
-    aspect-ratio:1530/2048;           /* rasio asli foto */
-    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);
-            mask-image:linear-gradient(90deg,transparent 0,#000 12%);
-  }
-  .hp img{
-    width:100%;height:100%;max-height:none;
-    object-fit:cover;object-position:50% 0;
-  }
-  /* fade bawah menyatu ke ticker */
-  .hp::after{
-    display:block;content:"";position:absolute;inset:auto 0 0 0;height:22%;
-    border:0;z-index:2;pointer-events:none;
-    background:linear-gradient(180deg,transparent,#dcbd94);
-  }
-  .ht{max-width:540px}
-}
-/* layar lebar: foto sedikit digeser supaya tidak menempel pinggir */
-@media(min-width:1500px){
-  .hp{right:max(0px,calc((100vw - 1500px)/2))}
-}
-</style>
+  
+</head>
+</head>
 <body>
 <div id="bar"></div>
 
@@ -450,7 +531,7 @@ footer{background:#242424;color:#bdb7a8;border-top:3px solid #d9241f}
       <p>Belajar musik dengan pengajar peraih Best Teacher Award dan Gold Award. Kelas pertama gratis, tanpa komitmen.</p>
       <div class="cta"><a class="btn" data-wa href="#kontak">Daftar free trial</a><a class="btn ghost" href="#murid">Lihat prestasi murid</a></div>
     </div>
-    <figure class="hp"><img src="hero-felix.jpg" width="1530" height="2048" alt="Potret Felix Satia" fetchpriority="high"></figure>
+    <figure class="hp"><img src="foto1_edit_v3.jpg" width="912" height="1136" alt="Potret Felix Satia di samping piano" fetchpriority="high"></figure>
   </div>
 </header>
   <div class="tick" aria-label="Sorotan prestasi">
@@ -486,7 +567,7 @@ footer{background:#242424;color:#bdb7a8;border-top:3px solid #d9241f}
 </div></div>
 
 <section class="about" id="tentang"><div class="wrap">
-  <div class="frame rv"><img src="profil-felix.jpg" " alt="Felix Satia di depan grand piano" loading="lazy"></div>
+  <div class="frame rv"><img src="1728278677799.jpeg" alt="Felix Satia di depan grand piano" loading="lazy"></div>
   <div class="rv">
     <span class="eye">Tentang</span>
     <h2>Musik yang diajarkan dengan hati dan disiplin</h2>
@@ -728,4 +809,4 @@ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 document.querySelectorAll(".rv").forEach(el => io.observe(el));
 </script>
 </body>
-  </html>
+</html>
