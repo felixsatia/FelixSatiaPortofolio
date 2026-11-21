@@ -511,6 +511,108 @@ footer{background:#101a33;color:#b9c0d4;border-top:3px solid #1d3a72}
 @keyframes tick{to{transform:translateX(-50%)}}
 @media(max-width:700px){.tick{padding:13px 0}.tg span{font-size:.62rem;letter-spacing:.2em}.tg span::after{margin:0 22px}.tick::before,.tick::after{width:40px}}
   </style>
+  <style>
+/* ===== CINEMATIC BLUE GRADE · elite office · (foto murid tidak disentuh) ===== */
+
+/* Hero */
+.hp img{
+  filter:contrast(1.1) saturate(.86) brightness(.96) drop-shadow(0 40px 70px rgba(12,28,70,.45));
+  box-shadow:0 30px 80px rgba(10,22,56,.35);
+}
+.hp::before{
+  inset:0;z-index:2;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 85% 0%,rgba(120,170,255,.45),transparent 55%),
+    linear-gradient(180deg,transparent 45%,rgba(6,14,40,.65) 100%),
+    linear-gradient(135deg,rgba(40,90,200,.30),rgba(10,24,64,.35));
+  mix-blend-mode:overlay;
+  box-shadow:inset 0 0 110px rgba(4,10,30,.55);
+}
+
+/* Tentang */
+.frame img{filter:contrast(1.1) saturate(.86) brightness(.96)}
+.frame::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 85% 0%,rgba(120,170,255,.42),transparent 55%),
+    linear-gradient(180deg,transparent 45%,rgba(6,14,40,.6) 100%),
+    linear-gradient(135deg,rgba(40,90,200,.28),rgba(10,24,64,.32));
+  mix-blend-mode:overlay;
+  box-shadow:inset 0 0 100px rgba(4,10,30,.5);
+}
+.frame{box-shadow:0 30px 70px rgba(10,22,56,.28)}
+
+/* Galeri */
+.gal img{filter:contrast(1.1) saturate(.84) brightness(.96)}
+.gal figure:hover img{filter:contrast(1.14) saturate(.95) brightness(1)}
+.gal .im::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(110% 70% at 90% 0%,rgba(120,170,255,.38),transparent 55%),
+    linear-gradient(180deg,transparent 50%,rgba(6,14,40,.55) 100%),
+    linear-gradient(135deg,rgba(40,90,200,.26),rgba(10,24,64,.30));
+  mix-blend-mode:overlay;
+  transition:opacity .6s;
+}
+.gal figure:hover .im::before{opacity:.6}
+.gal .im::after{box-shadow:inset 0 0 70px rgba(4,10,30,.38);z-index:2}
+
+/* Potret hitam putih -> duotone biru navy */
+.pg img{filter:grayscale(1) contrast(1.15) brightness(.98)}
+.pg figure:hover img{filter:grayscale(1) contrast(1.2) brightness(1.06)}
+.pg .fr::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(160deg,#4f86e8,#14274f 70%);
+  mix-blend-mode:color;opacity:.55;
+}
+.pg .fr{border-color:rgba(143,176,234,.35);box-shadow:0 30px 70px rgba(2,6,20,.8)}
+
+/* Thumbnail video */
+.vid::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(110% 70% at 90% 0%,rgba(120,170,255,.38),transparent 55%),
+    linear-gradient(135deg,rgba(40,90,200,.30),rgba(10,24,64,.4));
+  mix-blend-mode:overlay;
+}
+.vid .play{z-index:3}
+
+/* Bar statistik: ramping & elegan */
+.stats{
+  background:linear-gradient(90deg,#101a33,#1d3a72 50%,#101a33);
+  border-block:1px solid rgba(143,176,234,.35);
+}
+.stat{
+  padding:16px 14px;
+  display:flex;align-items:baseline;justify-content:center;gap:12px;
+  border-right:1px solid rgba(255,255,255,.14);
+}
+.stat b{
+  display:inline;margin:0;
+  font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;letter-spacing:-.01em;
+  color:#fff;
+}
+.stat span{
+  font-size:.6rem;letter-spacing:.24em;font-weight:500;
+  color:rgba(246,240,222,.72);
+}
+@media(max-width:700px){
+  .stat{padding:12px 8px;flex-direction:column;align-items:center;gap:2px}
+  .stat b{font-size:1.25rem}
+  .stat span{font-size:.54rem;letter-spacing:.16em}
+}
+
+/* Polesan brand: lebih halus & premium */
+.btn{letter-spacing:.16em;font-size:.72rem;padding:15px 34px;box-shadow:0 8px 26px rgba(20,39,79,.28)}
+.btn.sm{padding:9px 20px;font-size:.64rem}
+nav ul{font-size:.7rem;letter-spacing:.2em}
+.eye{font-size:.68rem;letter-spacing:.36em}
+.hero h1{letter-spacing:-.04em}
+.card{padding:40px 30px}
+.card svg{stroke-width:1}
+.row{padding:22px 0}
+.row small{letter-spacing:.2em;font-size:.62rem}
+    </style>
   
 </head>
 </head>
