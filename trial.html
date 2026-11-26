@@ -291,6 +291,31 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 .cap span{display:block;margin-bottom:8px;font:500 .64rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
 .cap b{display:block;font:italic 400 1.55rem/1.2 var(--serif);color:var(--ivory)}
 @media(max-width:700px){.hp .gr .cap{padding:44px 18px 18px}.cap b{font-size:1.2rem}}
+
+/* sentuhan sinematik tambahan */
+html{scrollbar-width:thin;scrollbar-color:#8f7640 #05070c}
+::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:#05070c}::-webkit-scrollbar-thumb{background:linear-gradient(#8f7640,#c9a96a);border:2px solid #05070c}
+body{font-kerning:normal;text-rendering:optimizeLegibility}
+h1,h2,h3,.quote,.pull p{font-feature-settings:"liga","dlig","kern"}
+html::before{content:"";position:fixed;inset:0;z-index:240;pointer-events:none;background:radial-gradient(ellipse 120% 100% at 50% 50%,transparent 58%,rgba(2,4,10,.4) 100%)}
+@keyframes title{from{opacity:0;letter-spacing:.07em;filter:blur(12px);transform:translateY(10px)}to{opacity:1;letter-spacing:-.042em;filter:none;transform:none}}
+.hero .ht>h1{animation:title 2.4s 1.45s var(--ease) both}
+.hp::after{content:"";position:absolute;inset:16px;z-index:5;pointer-events:none;opacity:.75;background:linear-gradient(var(--gold),var(--gold)) 0 0/24px 1px,linear-gradient(var(--gold),var(--gold)) 0 0/1px 24px,linear-gradient(var(--gold),var(--gold)) 100% 0/24px 1px,linear-gradient(var(--gold),var(--gold)) 100% 0/1px 24px,linear-gradient(var(--gold),var(--gold)) 0 100%/24px 1px,linear-gradient(var(--gold),var(--gold)) 0 100%/1px 24px,linear-gradient(var(--gold),var(--gold)) 100% 100%/24px 1px,linear-gradient(var(--gold),var(--gold)) 100% 100%/1px 24px;background-repeat:no-repeat}
+.gal figure .im,.pg .fr{clip-path:inset(0 0 100% 0);transition:clip-path 1.7s var(--ease)}
+.gal figure.in .im,.pg.in .fr{clip-path:inset(0)}
+.pg figure:nth-child(2) .fr{transition-delay:.25s}.pg figure:nth-child(3) .fr{transition-delay:.5s}
+.gal img,.pg img{scale:1.14}
+.gal:hover figure:not(:hover),.sg:hover .sc:not(:hover){opacity:.5}
+.vid::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(#000,#000) top/100% 6.5% no-repeat,linear-gradient(#000,#000) bottom/100% 6.5% no-repeat}
+.vid .play::before{content:"";position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(234,217,172,.55);animation:ring 3.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.92);opacity:.8}100%{transform:scale(1.75);opacity:0}}
+.about .lead:first-of-type::first-letter{float:left;font:500 4.6rem/.8 var(--serif);padding:8px 14px 0 0;color:var(--gold)}
+.chap{position:fixed;left:clamp(24px,3vw,44px);bottom:clamp(24px,3vw,40px);z-index:90;display:none;align-items:center;gap:14px;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);opacity:0;transition:opacity .5s}
+.chap.on{opacity:1}
+.chap::before{content:"";width:40px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.chap b{font:italic 500 1.1rem var(--serif);letter-spacing:.08em;color:var(--gold2)}
+@media(min-width:1100px){.chap{display:flex}}
+@media(prefers-reduced-motion:reduce){.gal figure .im,.pg .fr{clip-path:none}.chap{display:none}}
 </style>
 <noscript><style>.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}#pre,.cine{display:none}</style></noscript>
 </head>
@@ -298,6 +323,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 <div id="pre" aria-hidden="true"><div><b>Felix Satia</b><i></i><small>Pianis · Pengajar · Komponis</small></div></div>
 <div id="bar"></div>
 <div class="frm" aria-hidden="true"></div>
+<div class="chap" id="chap" aria-hidden="true"><b>—</b><span>Prolog</span></div>
 <nav id="nav"><div class="wrap">
   <a href="#top" class="logo">Felix Satia</a>
   <ul id="menu"><li><a href="#tentang">Tentang</a></li><li><a href="#pendekatan">Pendekatan</a></li><li><a href="#kelas">Kelas</a></li><li><a href="#prestasi">Prestasi</a></li><li><a href="#murid">Murid</a></li><li><a href="#performance">Performance</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#potret">Potret</a></li></ul>
@@ -580,6 +606,20 @@ document.addEventListener("pointermove",e=>{const t=e.target.closest&&e.target.c
 if(matchMedia("(hover:hover)").matches){const g=document.createElement("div");g.id="glow";document.body.appendChild(g);
 addEventListener("pointermove",e=>{g.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
 if(beam&&e.clientY<innerHeight)beam.style.translate=((e.clientX/innerWidth-.5)*40)+"px "+((e.clientY/innerHeight-.5)*20)+"px"},{passive:true})}
+
+/* indeks bab ala film */
+{const C=[["top","Prolog",""],["tentang","Tentang","01"],["pendekatan","Pendekatan","02"],["kelas","Kelas","03"],["tujuan","Tujuan belajar","04"],["prestasi","Prestasi","05"],["murid","Murid","06"],["performance","Performance","07"],["galeri","Galeri","08"],["potret","Potret","09"],["kontak","Epilog",""]];
+const el=$("chap"),n=el.querySelector("b"),t=el.querySelector("span");let tm;
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const c=C.find(x=>x[0]===e.target.id);if(!c)return;
+el.classList.remove("on");clearTimeout(tm);tm=setTimeout(()=>{n.textContent=c[2]?c[2]+" / 09":"—";t.textContent=c[1];el.classList.add("on")},280)}),{rootMargin:"-45% 0px -50% 0px"});
+C.forEach(c=>{const x=document.getElementById(c[0]);x&&co.observe(x)})}
+
+/* paralaks lembut pada foto galeri dan potret */
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){
+const PAR=[...document.querySelectorAll(".gal .im img,.pg .fr img")];let pt=0;
+const par=()=>{pt=0;for(const i of PAR){const r=i.parentElement.getBoundingClientRect();if(r.bottom<-50||r.top>innerHeight+50)continue;
+const m=r.height*.06,o=((r.top+r.height/2)/innerHeight-.5);i.style.translate="0 "+Math.max(-m,Math.min(m,-o*r.height*.14))+"px"}};
+addEventListener("scroll",()=>{if(!pt)pt=requestAnimationFrame(par)},{passive:true});par()}
 
 /* scroll: nav, progress, parallax, fade hero, tombol melayang */
 const hpImg=document.querySelector(".hp"),htEl=document.querySelector(".ht"),fab=document.querySelector(".fab"),kon=$("kontak");
