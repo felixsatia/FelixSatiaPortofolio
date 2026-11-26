@@ -85,9 +85,6 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 .beam{position:absolute;top:-20%;right:18%;width:38vw;height:140%;background:linear-gradient(180deg,rgba(234,217,172,.1),transparent 70%);transform:rotate(14deg);filter:blur(30px);pointer-events:none;animation:drift 16s ease-in-out infinite}
 @keyframes drift{50%{transform:rotate(11deg) translateX(-36px);opacity:.75}}
 .vg2{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 68% 46%,transparent 30%,rgba(2,4,10,.78) 100%),linear-gradient(90deg,rgba(2,4,10,.55),transparent 45%)}
-.flare{position:absolute;left:34%;right:-8%;top:45%;height:2px;z-index:1;pointer-events:none;mix-blend-mode:screen;filter:blur(1.4px);opacity:0;transform-origin:70% 50%;background:linear-gradient(90deg,transparent,rgba(201,169,106,.5),rgba(255,247,224,.95) 62%,transparent);animation:flare 4s 2.1s var(--ease) forwards}
-@keyframes flare{0%{opacity:0;transform:scaleX(.15)}35%{opacity:.85;transform:scaleX(1)}100%{opacity:.16;transform:scaleX(1)}}
-.dust{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .cine{position:absolute;left:0;right:0;height:11vh;background:#000;z-index:5;pointer-events:none;animation:cineOpen 1.8s 1.6s cubic-bezier(.76,0,.24,1) forwards}
 .cine.t{top:0}.cine.b{bottom:0}
 @keyframes cineOpen{to{height:0}}
@@ -269,7 +266,6 @@ footer li{list-style:none;margin-bottom:10px}footer li a{transition:.3s}footer l
 @media(max-width:760px){.fg{grid-template-columns:1fr}}
 .fab{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;padding:14px 24px;max-width:calc(100% - 36px);opacity:0;transform:translateY(22px);pointer-events:none;transition:opacity .6s,transform .6s var(--ease)}
 .fab.show{opacity:1;transform:none;pointer-events:auto}
-#glow{position:fixed;left:0;top:0;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;z-index:1;pointer-events:none;background:radial-gradient(circle,rgba(201,169,106,.12),transparent 65%);transition:transform .35s var(--ease)}
 
 /* lightbox */
 .lb{position:fixed;inset:0;background:rgba(3,5,10,.96);z-index:600;display:none;place-items:center;padding:30px}.lb.on{display:grid}
@@ -282,7 +278,30 @@ footer li{list-style:none;margin-bottom:10px}footer li a{transition:.3s}footer l
 .rv{opacity:0;transform:translateY(26px);filter:blur(4px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease),filter 1.2s var(--ease)}.rv.in{opacity:1;transform:none;filter:none}
 h2.rv{clip-path:inset(0 0 105% 0);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease),filter 1.2s var(--ease),clip-path 1.4s var(--ease)}
 h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pre,#glow,.cine,.flare,.dust{display:none}.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pre,.cine{display:none}.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}html{scroll-behavior:auto}}
+
+/* finishing eksekutif: tenang, tegas, tanpa kilau */
+body::after{opacity:.035}
+h2 em,.hero h1 span+span,.pull p em{animation:none;background-size:100% 100%}
+.run::after,.hp .gr::before,.btn::after{display:none}
+.run{background:linear-gradient(90deg,transparent,rgba(205,174,111,.45) 15%,rgba(205,174,111,.45) 85%,transparent)}
+section:not(.final)::after{background:var(--ink);border:1px solid var(--gold);box-shadow:none;width:9px;height:9px;margin-left:-4px}
+.logo{letter-spacing:.05em}
+nav ul{letter-spacing:.18em}
+.kick::after{content:"";flex:1;max-width:240px;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+.students .kick::after,.final .kick::after{display:none}
+.btn{background:linear-gradient(180deg,#e6d3a2,#c2a161);background-size:100% 100%;border-color:#e6d3a2;color:#0a0f1d;box-shadow:0 14px 34px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn:hover{background:linear-gradient(180deg,#f0e0b4,#cfb06b);transform:translateY(-2px);box-shadow:0 20px 44px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn.ghost{background:rgba(255,255,255,.02);color:var(--ivory);border-color:rgba(243,238,226,.4);box-shadow:none}
+.btn.ghost:hover{background:rgba(205,174,111,.08);border-color:var(--gold);color:var(--gold2)}
+.hp .gr .cap{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:64px 28px 26px;line-height:1.4;background:linear-gradient(transparent,rgba(3,5,12,.9))}
+.cap span{display:block;margin-bottom:8px;font:500 .64rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.cap b{display:block;font:italic 400 1.55rem/1.2 var(--serif);color:var(--ivory)}
+.cl,.pl,.gl a{box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.stat b{font-weight:400}
+.mq span{font-size:1.45rem}
+.row:hover small{background:transparent;color:var(--gold2);border-color:var(--gold)}
+@media(max-width:700px){.hp .gr .cap{padding:44px 18px 18px}.cap b{font-size:1.2rem}}
 </style>
 <noscript><style>.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}#pre,.cine{display:none}</style></noscript>
 </head>
@@ -299,7 +318,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 
 <div id="page">
 <header class="hero" id="top">
-  <div class="beam"></div><div class="vg2"></div><div class="flare"></div><canvas class="dust" id="dust"></canvas>
+  <div class="beam"></div><div class="vg2"></div>
   <div class="vl" aria-hidden="true">Jakarta · Di panggung sejak 2011</div>
   <div class="wrap hg">
     <div class="ht">
@@ -309,7 +328,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
       <div class="cta"><a class="btn" data-wa href="#kontak">Klaim Free Trial</a><a class="btn ghost" href="#murid">Lihat prestasi murid</a></div>
       <div class="creds"><span>Best Teacher Award</span><span>2× Gold Award</span><span>Komponis Berprestasi</span></div>
     </div>
-    <figure class="hp"><div class="gr"><img src="image%20(11)%20(1).jpg" alt="Potret Felix Satia" fetchpriority="high"></div></figure>
+    <figure class="hp"><div class="gr"><img src="image%20(11)%20(1).jpg" alt="Potret Felix Satia" fetchpriority="high"><figcaption class="cap"><span>Jakarta · Sejak 2011</span><b>Pianis, Pengajar &amp; Komponis</b></figcaption></div></figure>
   </div>
   <div class="scroll">Gulir</div>
   <div class="cine t" aria-hidden="true"></div><div class="cine b" aria-hidden="true"></div>
@@ -569,22 +588,7 @@ L.forEach(([a,s])=>ao.observe(s))}
 /* spotlight kartu + cahaya kursor + paralaks sorot hero */
 const beam=document.querySelector(".beam");
 document.addEventListener("pointermove",e=>{const t=e.target.closest&&e.target.closest(".cl,.row,.sc");if(!t)return;const r=t.getBoundingClientRect();t.style.setProperty("--mx",(e.clientX-r.left)+"px");t.style.setProperty("--my",(e.clientY-r.top)+"px")},{passive:true});
-if(matchMedia("(hover:hover)").matches){const g=document.createElement("div");g.id="glow";document.body.appendChild(g);
-addEventListener("pointermove",e=>{g.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
-if(beam&&e.clientY<innerHeight)beam.style.translate=((e.clientX/innerWidth-.5)*40)+"px "+((e.clientY/innerHeight-.5)*20)+"px"},{passive:true})}
-
-/* debu emas hero */
-{const cv=$("dust"),hero=document.getElementById("top");
-if(cv&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
-const cx=cv.getContext("2d"),dpr=Math.min(2,devicePixelRatio||1);let W,H;
-const size=()=>{W=cv.width=hero.clientWidth*dpr;H=cv.height=hero.clientHeight*dpr};size();
-const mk=()=>({x:Math.random()*W,y:Math.random()*H,r:(.4+Math.random()*1.3)*dpr,a:.1+Math.random()*.38,v:.08+Math.random()*.22,d:(Math.random()-.5)*.12});
-const P=Array.from({length:innerWidth<700?18:42},mk);
-addEventListener("resize",size,{passive:true});
-(function loop(){if(scrollY<innerHeight){cx.clearRect(0,0,W,H);
-for(const p of P){p.y-=p.v*dpr;p.x+=p.d*dpr;if(p.y<-4){p.y=H+4;p.x=Math.random()*W}
-cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fillStyle="rgba(234,217,172,"+p.a+")";cx.fill()}}
-requestAnimationFrame(loop)})()}}
+if(beam&&matchMedia("(hover:hover)").matches)addEventListener("pointermove",e=>{if(e.clientY<innerHeight)beam.style.translate=((e.clientX/innerWidth-.5)*30)+"px "+((e.clientY/innerHeight-.5)*14)+"px"},{passive:true});
 
 /* scroll: nav, progress, parallax, fade hero, tombol melayang */
 const hpImg=document.querySelector(".hp"),htEl=document.querySelector(".ht"),fab=document.querySelector(".fab"),kon=$("kontak");
