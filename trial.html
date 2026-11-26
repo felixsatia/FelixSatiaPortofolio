@@ -542,7 +542,7 @@ const STU=[
 ["Claire Deitra H.","1st Commendation","Kompetisi Piano","Rhapsodie.co",SP[3]],
 ["Claire Deitra H.","3rd Commendation","Rhapsodie","NICE PIK 2",SP[4]]];
 /* CROP: [atas, bawah] sebagai pecahan tinggi foto asli; null = tampil penuh */
-const CROP=[[0.295,0.933],[0.215,0.853],[0.215,0.853],null,[0.11,0.90]];
+const CROP=[[0.295,0.933],[0.215,0.853],[0.215,0.853],null,[0.11,0.82]];
 const BOX_RATIO=194/262;
 function applyCrop(img,r){
   const iw=img.naturalWidth,ih=img.naturalHeight;
@@ -552,12 +552,17 @@ function applyCrop(img,r){
   const cx=(1-cw)/2,s=img.style;
   s.objectFit="fill";s.width=(100/cw)+"%";s.height=(100/ch)+"%";s.left=(-cx/cw*100)+"%";s.top=(-top/ch*100)+"%";
 }
+/* potong otomatis tepi putih di bawah foto (cadangan: nilai CROP manual) */
+function trimWhite(img,n){try{const w=240,h=Math.round(w*img.naturalHeight/img.naturalWidth),cv=document.createElement("canvas");cv.width=w;cv.height=h;
+const x=cv.getContext("2d");x.drawImage(img,0,0,w,h);const d=x.getImageData(0,0,w,h).data;let y=h-1;
+for(;y>0;y--){let k=0;for(let i=0;i<w;i++){const o=(y*w+i)*4;if(d[o]>222&&d[o+1]>222&&d[o+2]>222)k++}if(k/w<.92)break}
+const b=Math.min(CROP[n][1],(y+1)/h-.015);if(b-CROP[n][0]>.3)applyCrop(img,[CROP[n][0],b])}catch(e){}}
 STU.forEach((s,n)=>{const c=document.createElement("div");c.className="sc rv";c.tabIndex=0;
 const ini=s[0].split(" ").map(w=>w[0]).join("").slice(0,2);
 c.innerHTML=`<div class="pw"><div class="ph0">${ini}</div><img class="ph" alt="${s[0]}" decoding="async"></div><div class="tx"><b>${s[1]}</b><h3>${s[0]}</h3><p>${s[2]}<br>${s[3]}</p></div>`;
 $("sg").appendChild(c);io.observe(c);
 const img=c.querySelector("img");
-img.onload=()=>{applyCrop(img,CROP[n]);c.onclick=()=>openLB(ACH.length+n);c.onkeydown=e=>{if(e.key==="Enter")c.onclick()}};
+img.onload=()=>{applyCrop(img,CROP[n]);if(n===4)trimWhite(img,n);c.onclick=()=>openLB(ACH.length+n);c.onkeydown=e=>{if(e.key==="Enter")c.onclick()}};
 img.src=s[4]});
 
 /* video */
