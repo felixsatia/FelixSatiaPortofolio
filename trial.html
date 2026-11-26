@@ -9,33 +9,35 @@
 <meta property="og:description" content="Free Trial gratis bersama pengajar musik peraih Best Teacher Award dan Gold Award.">
 <!-- Untuk preview WhatsApp, ganti dengan URL penuh gambar -->
 <meta property="og:image" content="image%20(8)%20(2).jpg">
-<meta name="theme-color" content="#07090f">
+<meta name="theme-color" content="#05070c">
 <meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--ink:#07090f;--ink2:#0a0e18;--navy:#0c1428;--navy2:#111c3a;--ivory:#f3eee2;--mute:#b9bfd0;--gold:#c9a96a;--gold2:#ead9ac;--line:rgba(201,169,106,.24);--line2:rgba(201,169,106,.5);
+:root{color-scheme:dark;--ink:#05070c;--ink2:#080b14;--navy:#0a1226;--navy2:#111c3a;--ivory:#f3eee2;--mute:#b9bfd0;--gold:#cdae6f;--gold2:#ead9ac;--line:rgba(205,174,111,.2);--line2:rgba(205,174,111,.42);
 --foil:linear-gradient(115deg,#a98b4d 0%,#ead9ac 28%,#c9a96a 52%,#f4e6c0 74%,#a98b4d 100%);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px;overflow-x:hidden;width:100%;-webkit-text-size-adjust:100%}
 body{background:var(--ink);color:var(--ivory);font:300 16px/1.8 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%;position:relative}
 #page{position:relative;width:100%;overflow-x:hidden;overflow-x:clip}
-body::after{content:"";position:fixed;inset:0;z-index:500;pointer-events:none;opacity:.035;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+body::after{content:"";position:fixed;inset:0;z-index:500;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 @media(hover:none){body::after{display:none}}
 img{max-width:100%;display:block}a{color:inherit;text-decoration:none}[hidden]{display:none!important}
 ::selection{background:var(--gold);color:#0b1020}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .wrap{width:min(1180px,90%);margin:auto}
 section{padding:clamp(96px,11vw,156px) 0;position:relative}
 h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.012em}
-h2{font-size:clamp(2.5rem,5.4vw,4.3rem);margin-bottom:22px;letter-spacing:-.022em;text-wrap:balance}
-h2 em,.hero h1 span+span{font-style:italic;font-weight:400;background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 7s linear infinite}
+h2{font-size:clamp(2.5rem,5.4vw,4.3rem);margin-bottom:22px;font-weight:400;letter-spacing:-.028em;text-wrap:balance}
+h2 em,.hero h1 span+span{font-style:italic;font-weight:400;background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 11s linear infinite}
 @keyframes foil{to{background-position:-200% 0}}
 p{text-wrap:pretty}
-.kick{display:flex;align-items:center;gap:16px;color:var(--gold);font-size:.74rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;margin-bottom:24px}
+.kick{display:flex;align-items:center;gap:16px;color:#d6b97f;font-size:.74rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;margin-bottom:24px}
 .kick::before{content:"";width:54px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
-.kick i{font:italic 500 2.8rem/1 var(--serif);color:transparent;-webkit-text-stroke:1px var(--gold);text-transform:none}
-.lead{color:#c3c8d6;max-width:56ch;font-size:1.08rem;line-height:1.9}
+.kick i{font:italic 500 2.8rem/1 var(--serif);color:transparent;-webkit-text-stroke:.8px var(--gold);text-transform:none}
+.lead{color:#c9cedb;max-width:56ch;font-size:1.08rem;line-height:1.9}
 #bar{position:fixed;top:0;left:0;height:2px;width:0;z-index:300;background:var(--foil);box-shadow:0 0 14px rgba(201,169,106,.6)}
+.frm{position:fixed;inset:14px;z-index:250;pointer-events:none;border:1px solid rgba(205,174,111,.13)}
+@media(max-width:700px){.frm{inset:7px}}
 section:not(.final)::before{content:"";position:absolute;top:0;left:50%;width:1px;height:72px;background:linear-gradient(var(--line2),var(--gold));pointer-events:none}
 section:not(.final)::after{content:"";position:absolute;top:72px;left:50%;width:7px;height:7px;margin-left:-3px;transform:rotate(45deg);background:var(--gold);box-shadow:0 0 14px var(--gold);pointer-events:none}
 
@@ -51,11 +53,11 @@ section:not(.final)::after{content:"";position:absolute;top:72px;left:50%;width:
 /* grade sinematik */
 .gr{position:relative;isolation:isolate;background:linear-gradient(150deg,#16203a,#0a0f1f)}
 .gr img{filter:contrast(1.05) saturate(.98)}
-.gr::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:overlay;background:linear-gradient(180deg,transparent 55%,rgba(6,12,32,.2)),linear-gradient(135deg,rgba(40,80,170,.05),rgba(10,22,56,.06));box-shadow:inset 0 0 70px rgba(4,8,24,.18)}
+.gr::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,transparent 45%,rgba(4,8,22,.42)),linear-gradient(120deg,rgba(205,174,111,.09),transparent 42%,rgba(18,44,104,.16));box-shadow:inset 0 0 90px rgba(2,4,14,.4)}
 
 /* nav */
 nav{position:fixed;inset:0 0 auto;z-index:100;padding:calc(22px + env(safe-area-inset-top,0px)) 0 22px;transition:.5s var(--ease)}
-nav.s{background:rgba(7,9,15,.84);backdrop-filter:blur(18px) saturate(1.2);padding:calc(11px + env(safe-area-inset-top,0px)) 0 11px}
+nav.s{background:rgba(5,7,12,.86);backdrop-filter:blur(18px) saturate(1.2);padding:calc(11px + env(safe-area-inset-top,0px)) 0 11px}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{font:500 1.6rem var(--serif);letter-spacing:.02em;display:flex;align-items:baseline;gap:10px;white-space:nowrap;flex-shrink:0}
 .logo::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
@@ -67,14 +69,14 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 .run{position:absolute;left:0;right:0;bottom:0;height:3px;overflow:hidden;background:linear-gradient(90deg,transparent,rgba(201,169,106,.38) 12%,rgba(201,169,106,.38) 88%,transparent)}
 .run::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:40%;background:linear-gradient(90deg,transparent,#ead9ac 40%,#fff6da 50%,#ead9ac 60%,transparent);box-shadow:0 0 16px rgba(234,217,172,.9);animation:runline 5s linear infinite}
 @keyframes runline{to{left:100%}}
-.btn{position:relative;overflow:hidden;display:inline-block;padding:16px 38px;font:600 .74rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#0b1020;background:var(--foil);background-size:200% 100%;border:1px solid var(--gold);transition:.5s var(--ease);box-shadow:0 12px 34px rgba(201,169,106,.18);cursor:pointer}
+.btn{position:relative;overflow:hidden;display:inline-block;padding:16px 38px;font:600 .74rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#0b1020;background:var(--foil);background-size:200% 100%;border:1px solid var(--gold);transition:.5s var(--ease);box-shadow:0 12px 32px rgba(0,0,0,.4);cursor:pointer}
 .btn::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .8s var(--ease)}
-.btn:hover{transform:translateY(-3px);background-position:100% 0;box-shadow:0 20px 50px rgba(201,169,106,.38)}.btn:hover::after{left:130%}.btn:active{transform:scale(.98)}
+.btn:hover{transform:translateY(-3px);background-position:100% 0;box-shadow:0 18px 44px rgba(205,174,111,.26)}.btn:hover::after{left:130%}.btn:active{transform:scale(.98)}
 .btn.ghost{background:rgba(255,255,255,.02);color:var(--ivory);border-color:rgba(243,238,226,.38);box-shadow:none;backdrop-filter:blur(4px)}
 .btn.ghost:hover{border-color:var(--gold);color:var(--gold2);box-shadow:0 0 0 1px var(--gold) inset}
 .btn.sm{padding:11px 24px;font-size:.68rem}nav .btn{white-space:nowrap;flex-shrink:0}
 .cta .btn,.final .btn:not(.sm){padding:19px 44px;font-size:.78rem}
-@media(max-width:1100px){.mb{display:block}nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(7,9,15,.97);border-bottom:1px solid var(--line);white-space:normal}nav ul.o{display:flex}nav ul a{display:block;padding:16px 5%}nav .btn{display:none}}
+@media(max-width:1280px){.mb{display:block}nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(5,7,12,.97);border-bottom:1px solid var(--line);white-space:normal}nav ul.o{display:flex}nav ul a{display:block;padding:16px 5%}nav .btn{display:none}}
 
 /* hero */
 .hero{position:relative;padding:136px 0 96px;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse 42% 60% at 76% 42%,rgba(234,217,172,.17),transparent 62%),radial-gradient(ellipse 60% 55% at 80% 30%,rgba(34,64,122,.6),transparent 62%),radial-gradient(ellipse 45% 40% at 12% 12%,rgba(201,169,106,.1),transparent 65%),radial-gradient(ellipse 60% 50% at 0 100%,#0b1330,transparent 60%),var(--ink)}
@@ -82,10 +84,17 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(transparent,var(--ink));pointer-events:none}
 .beam{position:absolute;top:-20%;right:18%;width:38vw;height:140%;background:linear-gradient(180deg,rgba(234,217,172,.1),transparent 70%);transform:rotate(14deg);filter:blur(30px);pointer-events:none;animation:drift 16s ease-in-out infinite}
 @keyframes drift{50%{transform:rotate(11deg) translateX(-36px);opacity:.75}}
+.vg2{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 68% 46%,transparent 30%,rgba(2,4,10,.78) 100%),linear-gradient(90deg,rgba(2,4,10,.55),transparent 45%)}
+.flare{position:absolute;left:34%;right:-8%;top:45%;height:2px;z-index:1;pointer-events:none;mix-blend-mode:screen;filter:blur(1.4px);opacity:0;transform-origin:70% 50%;background:linear-gradient(90deg,transparent,rgba(201,169,106,.5),rgba(255,247,224,.95) 62%,transparent);animation:flare 4s 2.1s var(--ease) forwards}
+@keyframes flare{0%{opacity:0;transform:scaleX(.15)}35%{opacity:.85;transform:scaleX(1)}100%{opacity:.16;transform:scaleX(1)}}
+.dust{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.cine{position:absolute;left:0;right:0;height:11vh;background:#000;z-index:5;pointer-events:none;animation:cineOpen 1.8s 1.6s cubic-bezier(.76,0,.24,1) forwards}
+.cine.t{top:0}.cine.b{bottom:0}
+@keyframes cineOpen{to{height:0}}
 .hg{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,90px);align-items:center;position:relative;z-index:2}
 .role{display:flex;align-items:center;gap:16px;color:var(--gold);font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:28px}
 .role::before{content:"";width:54px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
-.hero h1{font-size:clamp(4.8rem,13vw,10.8rem);line-height:.88;letter-spacing:-.035em;margin-bottom:36px;text-shadow:0 10px 60px rgba(0,0,0,.5)}
+.hero h1{font-size:clamp(4.8rem,13vw,10.8rem);line-height:.88;font-weight:400;letter-spacing:-.042em;margin-bottom:36px;text-shadow:0 10px 60px rgba(0,0,0,.5)}
 .hero h1 span{display:block}.hero h1 span+span{padding-left:.5em;filter:drop-shadow(0 6px 30px rgba(201,169,106,.22))}
 .hero p{max-width:42ch;font-size:1.1rem;color:#d6d9e2;margin-bottom:40px}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
@@ -93,11 +102,11 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 .creds span{display:flex;align-items:center;gap:10px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
 .creds span::before{content:"";width:5px;height:5px;transform:rotate(45deg);background:var(--gold)}
 .hp{justify-self:end;position:relative;line-height:0;max-width:100%}
-.hp .gr{display:block;overflow:hidden;min-width:min(380px,80vw);min-height:440px;box-shadow:0 50px 120px rgba(0,0,0,.7)}
+.hp .gr{display:block;overflow:hidden;min-width:min(380px,80vw);min-height:440px;box-shadow:0 60px 140px rgba(0,0,0,.75),0 0 90px -30px rgba(205,174,111,.28)}
 .hp img{width:auto;height:auto;max-width:100%;max-height:80vh;animation:kb 22s ease-in-out infinite alternate;transform-origin:50% 40%}
 @keyframes kb{to{transform:scale(1.1)}}
 .hp::before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--gold);z-index:-1;box-shadow:0 0 40px rgba(201,169,106,.15)}
-.hp .gr::before{content:"";position:absolute;inset:0 auto 0 -60%;width:45%;z-index:3;background:linear-gradient(100deg,transparent,rgba(234,217,172,.22),transparent);transform:skewX(-14deg);animation:sweep 2.6s 2.5s var(--ease) 1 both}
+.hp .gr::before{content:"";position:absolute;inset:0 auto 0 -60%;width:45%;z-index:3;background:linear-gradient(100deg,transparent,rgba(234,217,172,.22),transparent);transform:skewX(-14deg);animation:sweep 2.6s 2.6s var(--ease) 1 both}
 @keyframes sweep{to{left:140%}}
 .hero .ht>*{animation:rise 1.3s var(--ease) both}
 .hero .ht>:nth-child(1){animation-delay:1.35s}.hero .ht>:nth-child(2){animation-delay:1.47s}.hero .ht>:nth-child(3){animation-delay:1.63s}.hero .ht>:nth-child(4){animation-delay:1.77s}.hero .ht>:nth-child(5){animation-delay:1.91s}
@@ -130,16 +139,38 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 /* tentang */
 .about{background:radial-gradient(ellipse 50% 60% at 0 50%,rgba(34,64,122,.22),transparent 70%)}
 .about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,7vw,100px);align-items:center}
-.frame{position:relative;box-shadow:0 50px 110px rgba(0,0,0,.6);min-height:300px}.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%}
+.frame{position:relative;box-shadow:0 60px 140px rgba(0,0,0,.75),0 0 90px -30px rgba(205,174,111,.28);min-height:300px}.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%}
 .frame::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1px solid var(--gold);z-index:-1}
 .about .lead+.lead{margin-top:16px}
 .quote{font:italic 400 clamp(1.6rem,2.6vw,2.2rem)/1.3 var(--serif);color:var(--gold2);margin-top:40px;padding-left:28px;border-left:1px solid var(--gold)}
 @media(max-width:820px){.about .wrap{grid-template-columns:1fr}.frame::before{inset:14px -8px -14px 14px}}
 
+/* pendekatan belajar */
+.appr{background:radial-gradient(ellipse 55% 50% at 100% 0,rgba(34,64,122,.28),transparent 70%),radial-gradient(ellipse 40% 40% at 0 100%,rgba(205,174,111,.07),transparent 70%)}
+.appr h2{font-size:clamp(2.8rem,6vw,5rem);max-width:14ch}
+.appr .sub{font:italic 400 clamp(1.3rem,2.2vw,1.7rem)/1.5 var(--serif);color:var(--gold2);max-width:46ch;margin-bottom:26px}
+.pil{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:64px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pl{position:relative;padding:48px clamp(26px,4vw,52px) 52px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.008));transition:background .5s var(--ease)}
+.pl::before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:var(--foil);transition:width .7s var(--ease)}
+.pl:hover{background:linear-gradient(160deg,rgba(201,169,106,.1),transparent 70%)}.pl:hover::before{width:100%}
+.pl .no{display:block;font:italic 400 clamp(4rem,7vw,6rem)/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(205,174,111,.55);margin-bottom:20px}
+.pl h3{font-size:clamp(1.8rem,2.6vw,2.3rem);margin-bottom:6px}
+.pl em{display:block;font:italic 400 1.15rem var(--serif);color:var(--gold2);margin-bottom:16px}
+.pl p{color:var(--mute);font-size:.95rem;line-height:1.8;max-width:46ch}
+.pull{position:relative;max-width:900px;margin:clamp(80px,10vw,130px) auto 0;text-align:center}
+.pull::before{content:"\201C";display:block;font:italic 500 7rem/.6 var(--serif);color:var(--gold);opacity:.7;margin-bottom:18px}
+.pull p{font:italic 400 clamp(1.8rem,3.6vw,2.9rem)/1.3 var(--serif)}
+.pull p em{font-style:italic;background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 11s linear infinite}
+.pull::after{content:"";display:block;width:1px;height:64px;margin:44px auto 0;background:linear-gradient(var(--gold),transparent)}
+.apc{max-width:62ch;margin:36px auto 0;text-align:center}
+.apc .lead{margin:0 auto 34px}
+.apc small{display:block;margin-top:20px;font:italic 400 1.2rem var(--serif);color:var(--gold2)}
+@media(max-width:760px){.pil{grid-template-columns:1fr;margin-top:44px}}
+
 /* kelas */
 .programs{background:linear-gradient(180deg,var(--navy),var(--ink))}
 .g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));margin-top:58px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.cl{position:relative;padding:46px 32px 50px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.03),transparent);transition:background .5s var(--ease)}
+.cl{position:relative;padding:46px 32px 50px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.008));backdrop-filter:blur(6px);transition:background .5s var(--ease)}
 .cl::before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:var(--foil);transition:width .7s var(--ease)}
 .cl:hover{background:linear-gradient(160deg,rgba(201,169,106,.1),transparent 70%)}.cl:hover::before{width:100%}
 .cl svg{width:46px;height:46px;stroke:var(--gold);fill:none;stroke-width:1;margin-bottom:28px}
@@ -151,8 +182,8 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 /* tujuan belajar */
 .goal{background:radial-gradient(ellipse 50% 60% at 100% 0,rgba(34,64,122,.25),transparent 70%)}
 .gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:18px;margin-top:56px}
-.gl a{display:flex;flex-direction:column;padding:36px 28px 28px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.035),transparent);transition:.5s var(--ease)}
-.gl a:hover{border-color:var(--gold);transform:translateY(-8px);box-shadow:0 30px 60px -24px #000,0 0 40px -10px rgba(201,169,106,.3)}
+.gl a{display:flex;flex-direction:column;padding:36px 28px 28px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.008));backdrop-filter:blur(6px);transition:.5s var(--ease)}
+.gl a:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 30px 60px -24px #000,0 0 40px -10px rgba(201,169,106,.3)}
 .gl h3{font-size:1.85rem;margin-bottom:12px}.gl p{color:var(--mute);font-size:.92rem;flex:1}
 .gl span{margin-top:26px;color:var(--gold2);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}.gl span::after{content:" →"}
 
@@ -170,7 +201,7 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 .students{background:linear-gradient(180deg,var(--ink),var(--navy) 50%,var(--ink))}
 .students .head{text-align:center}.students .kick{justify-content:center}.students .kick::before{display:none}.students .lead{margin:0 auto}
 .sg{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(8px,1.8vw,24px);max-width:1040px;margin:58px auto 0}
-.sc{grid-column:span 2;min-width:0;position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#121f44,#070b19);overflow:hidden;cursor:pointer;box-shadow:0 34px 64px -30px #000,0 0 0 1px rgba(201,169,106,.5),0 0 60px -20px rgba(201,169,106,.25);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+.sc{grid-column:span 2;min-width:0;position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#121f44,#070b19);overflow:hidden;cursor:pointer;box-shadow:0 40px 80px -32px #000,0 0 0 1px rgba(205,174,111,.38),0 0 60px -20px rgba(201,169,106,.22);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
 .sc::before{content:"";position:absolute;left:0;top:0;right:0;height:2px;z-index:3;background:var(--foil)}
 .sg .sc:nth-child(4){grid-column:2/span 2}.sg .sc:nth-child(5){grid-column:4/span 2}
 .sg .sc:hover,.sg .sc:focus-visible{transform:translateY(-10px);box-shadow:0 50px 90px -30px #000,0 0 0 1px var(--gold)}
@@ -203,7 +234,7 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 @media(max-width:700px){.gal{columns:2;column-gap:12px;margin-top:36px}.gal figure{padding:6px 6px 0;margin-bottom:12px}.gal figure:nth-child(3n+2){margin-top:0}.gal figure:nth-child(even){margin-top:22px}.gal figcaption{font-size:.72rem;padding:10px 2px 12px}}
 
 /* potret */
-.noir{background:#050608;border-top:1px solid var(--line)}
+.noir{background:#040508;border-top:1px solid var(--line)}
 .noir .top{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,80px);align-items:end}
 .noir h2{font-size:clamp(3.1rem,7.2vw,5.8rem);max-width:11ch}
 .noir .q{margin-top:32px;font:italic 400 1.55rem/1.4 var(--serif);color:var(--gold2);padding-left:22px;border-left:1px solid var(--gold);max-width:30ch}
@@ -218,7 +249,7 @@ nav ul a:hover,nav ul a.act{opacity:1;color:var(--gold2)}nav ul a:hover::after,n
 @media(max-width:760px){.noir .top{grid-template-columns:1fr}}
 
 /* penutup */
-.final{text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(34,64,122,.55),var(--ink) 70%);border-top:1px solid var(--line);overflow:hidden}
+.final{text-align:center;background:radial-gradient(ellipse 60% 55% at 50% 0,rgba(205,174,111,.14),transparent 65%),radial-gradient(ellipse at 50% 0,rgba(34,64,122,.55),var(--ink) 72%);border-top:1px solid var(--line);overflow:hidden}
 .final::before{content:"";position:absolute;left:50%;top:0;width:1px;height:90px;background:linear-gradient(var(--gold),transparent)}
 .final::after{content:"FS";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);font:italic 500 clamp(16rem,38vw,34rem)/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(201,169,106,.09);pointer-events:none}
 .final .wrap{position:relative;z-index:1}
@@ -251,23 +282,25 @@ footer li{list-style:none;margin-bottom:10px}footer li a{transition:.3s}footer l
 .rv{opacity:0;transform:translateY(26px);filter:blur(4px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease),filter 1.2s var(--ease)}.rv.in{opacity:1;transform:none;filter:none}
 h2.rv{clip-path:inset(0 0 105% 0);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease),filter 1.2s var(--ease),clip-path 1.4s var(--ease)}
 h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pre,#glow{display:none}.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pre,#glow,.cine,.flare,.dust{display:none}.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}html{scroll-behavior:auto}}
 </style>
-<noscript><style>.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}#pre{display:none}</style></noscript>
+<noscript><style>.rv,h2.rv{opacity:1;transform:none;filter:none;clip-path:none}#pre,.cine{display:none}</style></noscript>
 </head>
 <body>
 <div id="pre" aria-hidden="true"><div><b>Felix Satia</b><i></i><small>Pianis · Pengajar · Komponis</small></div></div>
 <div id="bar"></div>
+<div class="frm" aria-hidden="true"></div>
 <nav id="nav"><div class="wrap">
   <a href="#top" class="logo">Felix Satia</a>
-  <ul id="menu"><li><a href="#tentang">Tentang</a></li><li><a href="#kelas">Kelas</a></li><li><a href="#prestasi">Prestasi</a></li><li><a href="#murid">Murid</a></li><li><a href="#performance">Performance</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#potret">Potret</a></li></ul>
+  <ul id="menu"><li><a href="#tentang">Tentang</a></li><li><a href="#pendekatan">Pendekatan</a></li><li><a href="#kelas">Kelas</a></li><li><a href="#prestasi">Prestasi</a></li><li><a href="#murid">Murid</a></li><li><a href="#performance">Performance</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#potret">Potret</a></li></ul>
   <a class="btn sm" data-wa href="#kontak">Free Trial</a>
   <button class="mb" id="mb" aria-label="Buka menu" aria-expanded="false">≡</button>
 </div><div class="run" aria-hidden="true"></div></nav>
 
 <div id="page">
 <header class="hero" id="top">
-  <div class="beam"></div><div class="vl" aria-hidden="true">Jakarta · Di panggung sejak 2011</div>
+  <div class="beam"></div><div class="vg2"></div><div class="flare"></div><canvas class="dust" id="dust"></canvas>
+  <div class="vl" aria-hidden="true">Jakarta · Di panggung sejak 2011</div>
   <div class="wrap hg">
     <div class="ht">
       <div class="role">Pianis · Pengajar · Komponis</div>
@@ -279,6 +312,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
     <figure class="hp"><div class="gr"><img src="image%20(11)%20(1).jpg" alt="Potret Felix Satia" fetchpriority="high"></div></figure>
   </div>
   <div class="scroll">Gulir</div>
+  <div class="cine t" aria-hidden="true"></div><div class="cine b" aria-hidden="true"></div>
 </header>
 
 <div class="mq" aria-hidden="true"><div class="tk" id="tk"></div></div>
@@ -301,8 +335,27 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
   </div>
 </div></section>
 
+<section class="appr" id="pendekatan"><div class="wrap">
+  <div class="kick rv"><i>02</i>Filosofi pembelajaran kami</div>
+  <h2 class="rv">Musik bukan sekadar <em>menekan tuts.</em></h2>
+  <p class="sub rv">Di balik satu lagu yang indah, ada telinga yang terlatih, pemahaman yang dalam, dan keberanian untuk berekspresi. Itulah yang kami bangun dalam setiap murid.</p>
+  <p class="lead rv">Banyak orang tua mengira les musik hanya soal membaca not balok atau chord, lalu memainkannya sesuai petunjuk. Itu memang bagian penting, tetapi baru sebagian kecil dari perjalanan seorang musisi. Kurikulum kami dirancang agar anak tumbuh menjadi musisi yang utuh: mampu membaca, mendengar, memahami, dan mencipta.</p>
+  <div class="pil rv">
+    <div class="pl"><span class="no">01</span><h3>Membaca &amp; Repertoar</h3><em>Fondasi literasi musik</em><p>Anak belajar membaca notasi dan membawakan karya dengan teknik yang rapi serta ekspresi yang matang. Ini bekal untuk tampil percaya diri, dari resital hingga ujian bergengsi.</p></div>
+    <div class="pl"><span class="no">02</span><h3>Teori Musik</h3><em>Memahami bahasa di balik lagu</em><p>Teori adalah peta yang menunjukkan bagaimana sebuah lagu dibangun. Anak tidak lagi menghafal urutan jari, tetapi mengerti alur musiknya. Hasilnya, belajar lagu baru menjadi lebih cepat, logis, dan tahan lama.</p></div>
+    <div class="pl"><span class="no">03</span><h3>Aural &amp; Solfeggio</h3><em>Mengasah kepekaan telinga</em><p>Musik hidup lewat pendengaran. Anak dilatih mengenali tinggi-rendah nada, pola ritme, dan harmoni langsung dengan telinga. Mereka bisa memainkan lagu yang didengar, bernyanyi dengan tepat, dan peka terhadap kualitas bunyi.</p></div>
+    <div class="pl"><span class="no">04</span><h3>Improvisasi</h3><em>Keberanian menciptakan musik sendiri</em><p>Seperti berbicara dengan bebas, bukan hanya membaca naskah, improvisasi melatih anak mengolah ide musikal secara spontan. Mereka belajar berkreasi tanpa takut salah. Kreativitas, kepercayaan diri, dan kemampuan merespons situasi tumbuh bersamaan.</p></div>
+  </div>
+  <blockquote class="pull rv"><p>Anak yang hanya membaca not akan mampu memainkan lagu. Anak yang mendengar, memahami, dan berkreasi akan mampu <em>bermusik</em> seumur hidup.</p></blockquote>
+  <div class="apc rv">
+    <p class="lead">Dengan memadukan keempat pilar ini, belajar musik menjadi investasi bagi cara berpikir, kepekaan, dan kepercayaan diri anak, bukan sekadar kegiatan sepulang sekolah.</p>
+    <a class="btn" id="cta-pend" target="_blank" rel="noopener" href="#kontak">Jadwalkan Sesi Konsultasi &amp; Trial Class</a>
+    <small>Kenali potensi musikal putra-putri Anda.</small>
+  </div>
+</div></section>
+
 <section class="programs" id="kelas"><div class="wrap">
-  <div class="kick"><i>02</i>Kelas</div>
+  <div class="kick"><i>03</i>Kelas</div>
   <h2 class="rv">Kelas yang bisa <em>kamu pilih</em></h2>
   <p class="lead rv">Semua kelas dimulai dengan Free Trial, agar kamu bisa mengenal cara mengajar dan menentukan level yang cocok.</p>
   <div class="g4 rv">
@@ -314,14 +367,14 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 </div></section>
 
 <section class="goal" id="tujuan"><div class="wrap">
-  <div class="kick"><i>03</i>Tujuan belajar</div>
+  <div class="kick"><i>04</i>Tujuan belajar</div>
   <h2 class="rv">Mulai dari <em>tujuanmu</em></h2>
   <p class="lead rv">Setiap murid punya arah sendiri. Pilih yang paling dekat, lalu program disusun dari sana.</p>
   <div class="gl rv" id="gl"></div>
 </div></section>
 
 <section id="prestasi"><div class="wrap">
-  <div class="kick"><i>04</i>Prestasi pengajar</div>
+  <div class="kick"><i>05</i>Prestasi pengajar</div>
   <h2 class="rv">Jejak <em>prestasi</em></h2>
   <p class="lead rv">Klik baris mana pun untuk melihat sertifikat aslinya.</p>
   <div class="tl rv" id="tl"></div>
@@ -329,7 +382,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 
 <section class="students" id="murid"><div class="wrap">
   <div class="head">
-    <div class="kick"><i>05</i>Murid kami</div>
+    <div class="kick"><i>06</i>Murid kami</div>
     <h2 class="rv">Murid yang <em>tumbuh bersama kami</em></h2>
     <p class="lead rv">Bukti dari latihan yang terarah: dari ujian internasional hingga festival piano nasional.</p>
   </div>
@@ -339,7 +392,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 <section class="perf" id="performance"><div class="wrap">
   <div class="vid rv" id="vid" role="button" tabindex="0" aria-label="Putar video Chopin Étude Op. 25 No. 1"><div class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div></div>
   <div class="rv">
-    <div class="kick"><i>06</i>Performance</div>
+    <div class="kick"><i>07</i>Performance</div>
     <h2>Chopin: <em>Étude Op. 25 No. 1</em></h2>
     <p class="lead">Karya ini menuntut kontrol sentuhan yang halus dan arpeggio yang mengalir. Tonton satu penampilan lengkap, dan dengarkan sendiri standar yang kamu pelajari di kelas.</p>
     <a class="btn ghost" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=fVnfH2ow5bM">Buka di YouTube</a>
@@ -347,7 +400,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 </div></section>
 
 <section id="galeri"><div class="wrap">
-  <div class="kick"><i>07</i>Album kenangan</div>
+  <div class="kick"><i>08</i>Album kenangan</div>
   <h2 class="rv">Dari panggung dan <em>ruang kelas</em></h2>
   <p class="lead rv">Resital, festival, konser paduan suara, dan kelas bersama murid dari berbagai usia. Setiap bingkai menyimpan satu bab perjalanan.</p>
   <div class="gal" id="gal"></div>
@@ -355,7 +408,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 
 <section class="noir" id="potret"><div class="wrap">
   <div class="top">
-    <div class="rv"><div class="kick"><i>08</i>Potret</div><h2>Teaching is an <em>art.</em></h2></div>
+    <div class="rv"><div class="kick"><i>09</i>Potret</div><h2>Teaching is an <em>art.</em></h2></div>
     <div class="rv"><p class="lead">Di balik piano dan ruang kelas, setiap nada dilatih dengan sabar, dan setiap murid didengarkan.</p><p class="q">Mengajar adalah seni: menemukan nada terbaik dalam diri setiap murid.</p></div>
   </div>
   <div class="pg rv" id="pg"></div>
@@ -379,7 +432,7 @@ h2.rv.in{clip-path:inset(-20% -5% -20% -5%)}
 <footer>
   <div class="wrap fg">
     <div><a href="#top" class="logo">Felix Satia</a><p>Pianis, pengajar, dan komponis dari Jakarta. Piano, teori musik, paduan suara, dan komposisi untuk semua usia dan level.</p></div>
-    <div><h4>Jelajahi</h4><ul><li><a href="#tentang">Tentang</a></li><li><a href="#kelas">Kelas</a></li><li><a href="#prestasi">Prestasi</a></li><li><a href="#murid">Murid</a></li><li><a href="#galeri">Galeri</a></li></ul></div>
+    <div><h4>Jelajahi</h4><ul><li><a href="#tentang">Tentang</a></li><li><a href="#pendekatan">Pendekatan</a></li><li><a href="#kelas">Kelas</a></li><li><a href="#prestasi">Prestasi</a></li><li><a href="#murid">Murid</a></li><li><a href="#galeri">Galeri</a></li></ul></div>
     <div><h4>Hubungi</h4><ul><li><a data-wa target="_blank" rel="noopener" href="#">WhatsApp</a></li><li><a data-ig target="_blank" rel="noopener" href="#">Instagram</a></li><li><a data-yt target="_blank" rel="noopener" href="#">YouTube</a></li><li><a data-li target="_blank" rel="noopener" href="#">LinkedIn</a></li></ul></div>
   </div>
   <div class="wrap copy"><span>© <span id="yr"></span> Felix Satia. Hak cipta dilindungi.</span><span>Jakarta, Indonesia</span></div>
@@ -403,6 +456,7 @@ document.querySelectorAll("[data-ig]").forEach(a=>a.href=CONFIG.instagram);
 document.querySelectorAll("[data-yt]").forEach(a=>a.href=CONFIG.youtube);
 document.querySelectorAll("[data-li]").forEach(a=>a.href=CONFIG.linkedin);
 $("yr").textContent=new Date().getFullYear();
+$("cta-pend").href=waLink("Halo Kak Felix, saya ingin menjadwalkan sesi konsultasi dan trial class untuk anak saya.");
 $("mb").onclick=()=>{const o=$("menu").classList.toggle("o");$("mb").setAttribute("aria-expanded",o)};
 $("menu").onclick=()=>$("menu").classList.remove("o");
 /* gambar yang tidak ditemukan disembunyikan, tampilan tetap rapi */
@@ -512,16 +566,32 @@ document.addEventListener("keydown",e=>{if(!lb.classList.contains("on"))return;i
 const ao=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)L.forEach(([a,s])=>a.classList.toggle("act",s===e.target))}),{rootMargin:"-45% 0px -50% 0px"});
 L.forEach(([a,s])=>ao.observe(s))}
 
-/* spotlight kartu + cahaya kursor */
+/* spotlight kartu + cahaya kursor + paralaks sorot hero */
+const beam=document.querySelector(".beam");
 document.addEventListener("pointermove",e=>{const t=e.target.closest&&e.target.closest(".cl,.row,.sc");if(!t)return;const r=t.getBoundingClientRect();t.style.setProperty("--mx",(e.clientX-r.left)+"px");t.style.setProperty("--my",(e.clientY-r.top)+"px")},{passive:true});
 if(matchMedia("(hover:hover)").matches){const g=document.createElement("div");g.id="glow";document.body.appendChild(g);
-addEventListener("pointermove",e=>{g.style.transform=`translate(${e.clientX}px,${e.clientY}px)`},{passive:true})}
+addEventListener("pointermove",e=>{g.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
+if(beam&&e.clientY<innerHeight)beam.style.translate=((e.clientX/innerWidth-.5)*40)+"px "+((e.clientY/innerHeight-.5)*20)+"px"},{passive:true})}
 
-/* scroll: nav, progress, parallax, tombol melayang */
-const hpImg=document.querySelector(".hp"),fab=document.querySelector(".fab"),kon=$("kontak");
+/* debu emas hero */
+{const cv=$("dust"),hero=document.getElementById("top");
+if(cv&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+const cx=cv.getContext("2d"),dpr=Math.min(2,devicePixelRatio||1);let W,H;
+const size=()=>{W=cv.width=hero.clientWidth*dpr;H=cv.height=hero.clientHeight*dpr};size();
+const mk=()=>({x:Math.random()*W,y:Math.random()*H,r:(.4+Math.random()*1.3)*dpr,a:.1+Math.random()*.38,v:.08+Math.random()*.22,d:(Math.random()-.5)*.12});
+const P=Array.from({length:innerWidth<700?18:42},mk);
+addEventListener("resize",size,{passive:true});
+(function loop(){if(scrollY<innerHeight){cx.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v*dpr;p.x+=p.d*dpr;if(p.y<-4){p.y=H+4;p.x=Math.random()*W}
+cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fillStyle="rgba(234,217,172,"+p.a+")";cx.fill()}}
+requestAnimationFrame(loop)})()}}
+
+/* scroll: nav, progress, parallax, fade hero, tombol melayang */
+const hpImg=document.querySelector(".hp"),htEl=document.querySelector(".ht"),fab=document.querySelector(".fab"),kon=$("kontak");
 function onScroll(){const y=scrollY;$("nav").classList.toggle("s",y>60);
 $("bar").style.width=(y/Math.max(1,document.documentElement.scrollHeight-innerHeight)*100)+"%";
 if(hpImg&&y<innerHeight&&innerWidth>899)hpImg.style.translate="0 "+(y*.06)+"px";
+if(htEl&&y<innerHeight*1.2){const p=Math.min(1,y/innerHeight);htEl.style.opacity=1-p*1.15;htEl.style.translate="0 "+(p*36)+"px"}
 fab.classList.toggle("show",y>innerHeight*.8&&kon.getBoundingClientRect().top>=innerHeight*.7)}
 addEventListener("scroll",onScroll,{passive:true});onScroll();
 document.querySelectorAll(".rv").forEach(el=>io.observe(el));
